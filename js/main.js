@@ -14,7 +14,19 @@ $(function() {
     });*/
 
 
+	$('.hamburger').click(function(){
+		var _this = $(this);
 
+		if(_this.hasClass('active')){
+			_this.removeClass('active');
+			$('.navigation').hide();
+			$('.logo').show();
+		} else {
+			_this.addClass('active');
+			$('.navigation').show();
+			$('.logo').hide();
+		}
+	});
 
 
 

@@ -102,11 +102,14 @@ h1 {
     top:50px;
     right:74px;
     position:absolute;
+    z-index:9999;
 }
 
 .hamburger.active {
-    top:70px;
+    top:50px;
     right:75px;
+    width: 40px;
+    height: 40px;
 }
 
 .hamburger span:first-child {
@@ -127,7 +130,7 @@ h1 {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     background-color:#fff;
-    margin-top:0;
+    margin-top:20px;
 }
 
 .hamburger.active .bar-2 {
@@ -159,6 +162,7 @@ h1 {
     display: table-cell;
     vertical-align: middle;
     display:none;
+    z-index:9999;
 }
 
 .navigation .sub-logo {
