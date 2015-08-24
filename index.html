@@ -16,7 +16,10 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/timeTo.css">
+        <link rel="stylesheet" href="css/custom-animation.css">
         <link rel="stylesheet" href="css/main.css">
+
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="js/vendor/selectivizr-min.js"></script>
@@ -36,13 +39,6 @@
                         <li class="active"><a href="#">HQ<span>Home</span></a></li>
                         <li>
                             <a href="#">Buy<span>How To Purchase</span></a>
-                             <ul class="sub-nav">
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                            </ul>
                         </li>
                         <li class="has-sub">
                             <a href="#">Vehicles<span>Inspect The Vehicles</span></a>
@@ -60,23 +56,25 @@
                 </div>
 
                 <a href="#" class="hamburger">
-                    <span class="bar-1"></span>
-                    <span class="bar-2"></span>
-                    <span class="bar-3"></span>
+                    <span class="bar-1 patty"></span>
+                    <span class="bar-2 patty"></span>
+                    <span class="bar-3 patty"></span>
                 </a>
             </div>
 
             <div class="wrap">
 
                 <div class="hero-container">
-                    <div class="hero-overlay"> 
+                   <!-- <div class="hero-image"><img src="img/hero-img1.jpg"></div>
+                    <div class="hero-overlay"><img src="img/hero-img2.jpg"></div>-->
+                    <div class="hero-overlay">
                         <div class="container">
                             <h1>Own the ultimate <br>in off road hardware</h1>
                             <div class="auction-timer auction-timer-wrapper">
                                 <p>Next Auction Starts In</p>
 
 
-                                <div class="timer">
+                                <!--<div class="timer">
                                     <div class="timer-col day">
                                         <p class="dt-num">03</p>
                                         <p class="dt-lbl">Days</p>
@@ -95,7 +93,9 @@
                                         <p class="dt-num">03</p>
                                     </div>
                                 </div>
+                                -->
 
+                                <div id="countdown1" class="countdown"></div>
 
                                 <a href="#" class="engage-btn">
                                     <span class="fa fa-angle-left angle-3"></span>
@@ -126,12 +126,15 @@
                         <h1>Vehicle Types</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>
                         </div>
-                        <div class="counter">
+                        
+                        
+                        <div class="counter-cont">
                             <img src="img/counter-container.png">
                             <div class="auction-timer-wrapper">
                                 <p>Next Auction Starts In</p>
 
-                                <div class="timer">
+                                 <div id="countdown2" class="countdown"></div>
+                                <!--<div class="timer">
                                     <div class="timer-col day">
                                         <p class="dt-num">03</p>
                                         <p class="dt-lbl">Days</p>
@@ -149,7 +152,7 @@
                                     <div class="timer-col sec">
                                         <p class="dt-num">03</p>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -270,6 +273,9 @@
 
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.blImageCenter.js"></script>
+        <script src="js/vendor/TweenMax.min.js"></script>
+        <script src="js/vendor/jquery.timeTo.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
