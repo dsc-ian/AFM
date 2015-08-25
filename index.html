@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="css/timeTo.css">
         <link rel="stylesheet" href="css/custom-animation.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.css">
 
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -29,6 +30,20 @@
 
         <div id="home" class="wrapper">
 
+<!-- animated hiding" data-animation="fadeInDown" data-delay="100" -->
+            <div class="get-intel clearfix">
+                <div class="container">
+                    <div class="content">
+                        <h1>Get The Intel First</h1>
+                        <p>Sign up to our newsletter and get advance notification<br> of upcoming auctions, stock releases and more.</p>
+                    </div>
+                    <a href="#" class="btn signup">Sign Up</a>
+                </div>
+                <a href="#" class="btn-close"> 
+                    <span class="bar-1"></span>
+                    <span class="bar-2 "></span>
+                </a>
+            </div>
 
             <div class="header clearfix">
                 <a href="#" class="logo"><img src="img/logo.png"></a>
@@ -42,12 +57,13 @@
                         </li>
                         <li class="has-sub">
                             <a href="#">Vehicles<span>Inspect The Vehicles</span></a>
+
                             <ul class="sub-nav">
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
                             </ul>
                         </li>
                         <li><a href="#">Field Report<span>Get The Last Intel</span></a></li>
@@ -56,59 +72,82 @@
                 </div>
 
                 <a href="#" class="hamburger">
-                    <span class="bar-1 patty"></span>
-                    <span class="bar-2 patty"></span>
-                    <span class="bar-3 patty"></span>
+                    <span class="bar-1 patty-1"></span>
+                    <span class="bar-2 patty-2"></span>
+                    <span class="bar-3 patty-3"></span>
                 </a>
             </div>
 
             <div class="wrap">
 
-                <div class="hero-container">
+                <div class="hero-image">
                    <!-- <div class="hero-image"><img src="img/hero-img1.jpg"></div>
                     <div class="hero-overlay"><img src="img/hero-img2.jpg"></div>-->
-                    <div class="hero-overlay">
-                        <div class="container">
-                            <h1>Own the ultimate <br>in off road hardware</h1>
-                            <div class="auction-timer auction-timer-wrapper">
-                                <p>Next Auction Starts In</p>
-
-
-                                <!--<div class="timer">
-                                    <div class="timer-col day">
-                                        <p class="dt-num">03</p>
-                                        <p class="dt-lbl">Days</p>
-                                    </div>
-                                    <div class="timer-col separator"><p></p></div>
-                                    <div class="timer-col hr">
-                                        <p class="dt-num">30</p>
-                                        <p class="dt-lbl">Hours</p>
-                                    </div>
-                                    <div class="timer-col separator"><p></p></div>
-                                    <div class="timer-col min">
-                                        <p class="dt-num">30</p>
-                                        <p class="dt-lbl">Mins</p>
-                                    </div>
-                                    <div class="timer-col sec">
-                                        <p class="dt-num">03</p>
-                                    </div>
-                                </div>
-                                -->
-
-                                <div id="countdown1" class="countdown"></div>
-
-                                <a href="#" class="engage-btn">
-                                    <span class="fa fa-angle-left angle-3"></span>
-                                    <span class="fa fa-angle-left angle-2"></span>
-                                    <span class="fa fa-angle-left angle-1"></span>
-                                    <div>Engage</div>
-                                    <span class="fa fa-angle-right angle-1"></span>
-                                    <span class="fa fa-angle-right angle-2"></span>
-                                    <span class="fa fa-angle-right angle-3"></span>
-                                </a>
-                            </div>
+                    <!--
+                    <div class="hero-container">
+                        <div class="hero-overlay">
                         </div>
-                    </div>
+                    </div>-->
+                    <div class="hero-overlay">
+                    <div class="container">
+                                <h1>Own the ultimate <br>in off road hardware</h1>
+                                <div class="auction-timer auction-timer-wrapper">
+                                    <p>Next Auction Starts In</p>
+
+
+                                    <!--<div class="timer">
+                                        <div class="timer-col day">
+                                            <p class="dt-num">03</p>
+                                            <p class="dt-lbl">Days</p>
+                                        </div>
+                                        <div class="timer-col separator"><p></p></div>
+                                        <div class="timer-col hr">
+                                            <p class="dt-num">30</p>
+                                            <p class="dt-lbl">Hours</p>
+                                        </div>
+                                        <div class="timer-col separator"><p></p></div>
+                                        <div class="timer-col min">
+                                            <p class="dt-num">30</p>
+                                            <p class="dt-lbl">Mins</p>
+                                        </div>
+                                        <div class="timer-col sec">
+                                            <p class="dt-num">03</p>
+                                        </div>
+                                    </div>
+                                    -->
+
+                                    <div id="countdown1" class="countdown"></div>
+
+                                    <a href="#" class="engage-btn">
+                                        <span class="fa fa-angle-left angle-3"></span>
+                                        <span class="fa fa-angle-left angle-2"></span>
+                                        <span class="fa fa-angle-left angle-1"></span>
+                                        <div>Engage</div>
+                                        <span class="fa fa-angle-right angle-1"></span>
+                                        <span class="fa fa-angle-right angle-2"></span>
+                                        <span class="fa fa-angle-right angle-3"></span>
+                                    </a>
+                                </div>
+                            </div>
+
+                    </div>       
+                </div>
+                <div class="timer-wrapper section-row">
+                    <div class="auction-timer auction-timer-wrapper">
+                                    <p>Next Auction Starts In</p>
+
+                                    <div id="countdown3" class="countdown"></div>
+
+                                    <a href="#" class="engage-btn">
+                                        <span class="fa fa-angle-left angle-3"></span>
+                                        <span class="fa fa-angle-left angle-2"></span>
+                                        <span class="fa fa-angle-left angle-1"></span>
+                                        <div>Engage</div>
+                                        <span class="fa fa-angle-right angle-1"></span>
+                                        <span class="fa fa-angle-right angle-2"></span>
+                                        <span class="fa fa-angle-right angle-3"></span>
+                                    </a>
+                                </div>
                 </div>
                 <div class="about section-row">
                     <div class="container">
@@ -158,23 +197,23 @@
                     </div>
                     <div class="vehicle-type-wrapper clearfix">
                         <div class="vehicle-item">
-                            <img src="img/vehicle-img1.jpg">
+                            <img src="img/vehicle-img1.jpg" data-mobile-image="m-vehicle-img1.jpg">
                             <p>Trucks</p>
                         </div>
                         <div class="vehicle-item">
-                            <img src="img/vehicle-img2.jpg">
+                            <img src="img/vehicle-img2.jpg" data-mobile-image="m-vehicle-img2.jpg">
                             <p>Landrovers</p>
                         </div>
                         <div class="vehicle-item">
-                            <img src="img/vehicle-img3.jpg">
+                            <img src="img/vehicle-img3.jpg" data-mobile-image="m-vehicle-img3.jpg">
                             <p>Trailers</p>
                         </div>
                         <div class="vehicle-item">
-                            <img src="img/vehicle-img4.jpg">
+                            <img src="img/vehicle-img4.jpg" data-mobile-image="m-vehicle-img4.jpg">
                             <p>Motorcycles</p>
                         </div>
                         <div class="vehicle-item">
-                            <img src="img/vehicle-img5.jpg">
+                            <img src="img/vehicle-img5.jpg" data-mobile-image="m-vehicle-img5.jpg">
                             <p>Uninmogs</p>
                         </div>
                     </div>
@@ -203,52 +242,54 @@
 
                 <div class="footer-wrap">
                     <div class="container">
-                        <div class="footer-block">
-                            <h1>Contact Us</h1>
-                            <p>46 Airds Road, Minto, NSW 2566<br>
-                                PO Box 5172, Minto, NSW 2566<br>
-                                Phone: 02 8796 1800<br>
-                                Fax: 02 8795 0465</p>
-                        </div>
-                        <div class="footer-block">
-                            <h1>Vehicle Range</h1>
-                            <ul>
-                                <li><a href="#">Land Rover 4×4’s</a></li>
-                                <li><a href="#">Unimogs</a></li>
-                                <li><a href="#">ATVs</a></li>
-                                <li><a href="#">Land Rover 6×6’s</a></li>
-                                <li><a href="#">Heavy trucks</a></li>
-                                <li><a href="#">Light trailers</a></li>
-                                <li><a href="#">Heavy trailers</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-block">
-                            <h1>Buy A Vehicle</h1>
-                            <ul>
-                                <li><a href="#">How It Works</a></li>
-                                <li><a href="#">How Much Do They Cost</a></li>
-                                <li><a href="#">Showrooms</a></li>
-                                <li><a href="#">Auction</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-block">
-                            <h1>Enlist</h1>
-                            <div class="contact-form">
-                                <form>
-                                    <div>
-                                        <label>Name</label>
-                                        <input id="name" type="text" name="name">
-                                    </div>
-                                    <div>
-                                        <label>Email</label>
-                                        <input id="email" type="email" name="email">
-                                    </div>
-                                    <div>
-                                        <label>Postcode</label>
-                                        <input id="postcode" type="text" name="postcode">
-                                    </div>
-                                    <button>Sign Up</button>
-                                </form>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="footer-block col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <h1>Contact Us</h1>
+                                <p>46 Airds Road, Minto, NSW 2566<br>
+                                    PO Box 5172, Minto, NSW 2566<br>
+                                    Phone: 02 8796 1800<br>
+                                    Fax: 02 8795 0465</p>
+                            </div>
+                            <div class="footer-block col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <h1>Vehicle Range</h1>
+                                <ul>
+                                    <li><a href="#">Land Rover 4×4’s</a></li>
+                                    <li><a href="#">Unimogs</a></li>
+                                    <li><a href="#">ATVs</a></li>
+                                    <li><a href="#">Land Rover 6×6’s</a></li>
+                                    <li><a href="#">Heavy trucks</a></li>
+                                    <li><a href="#">Light trailers</a></li>
+                                    <li><a href="#">Heavy trailers</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-block col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <h1>Buy A Vehicle</h1>
+                                <ul>
+                                    <li><a href="#">How It Works</a></li>
+                                    <li><a href="#">How Much Do They Cost</a></li>
+                                    <li><a href="#">Showrooms</a></li>
+                                    <li><a href="#">Auction</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-block col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                <h1>Enlist</h1>
+                                <div class="contact-form">
+                                    <form>
+                                        <div>
+                                            <label>Name</label>
+                                            <input id="name" type="text" name="name">
+                                        </div>
+                                        <div>
+                                            <label>Email</label>
+                                            <input id="email" type="email" name="email">
+                                        </div>
+                                        <div>
+                                            <label>Postcode</label>
+                                            <input id="postcode" type="text" name="postcode">
+                                        </div>
+                                        <button>Sign Up</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -276,6 +317,7 @@
         <script src="js/vendor/jquery.blImageCenter.js"></script>
         <script src="js/vendor/TweenMax.min.js"></script>
         <script src="js/vendor/jquery.timeTo.js"></script>
+        <script src="js/vendor/jquery.appear.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
