@@ -23,9 +23,10 @@ $(function() {
 	} else {
 		_navSubHeight = '192px';
 	}
-
 	imageHero();
 	initPageAnim();
+
+	onLoadAnimation();
     /*
     $('.hero-container, .hero-overlay, .about, .vehicle-type, .more-intel').css({
     	height : _viewport.height + 'px'
@@ -250,7 +251,11 @@ function imageHero() {
 		_additionHeight = 75;
 	}
 	console.log(_additionHeight);
-	$('.hero-overlay, .hero-image').css({'height':wH+_additionHeight});
+	$('.hero-overlay, .hero-image, .hero-container').css({
+		'height': wH+_additionHeight, 
+		'width':wW
+	});
+	onLoadAnimation();
 	console.log(wW);
 
 }
@@ -310,6 +315,21 @@ function getRelativeDate(days, hours, minutes){
     return date;
 }
 
+function onLoadAnimation() {
+
+	var patties = ['.patty-1', '.patty-2', '.patty-3'];
+
+	TweenMax.set('.logo', {y:'-100%', opacity:0});
+	TweenMax.set(patties, {y:-100, opacity:0});
+
+	TweenMax.to('.logo', 1, {y:'0%', opacity:1, ease: Ease.easeOut});
+	TweenMax.staggerTo(patties.reverse(), 0.5, { 
+			opacity:1, 
+			y:0, 
+			ease:Expo.easeOut,
+			delay: 1
+		}, 0.1);
+}
 
 function initPageAnim( container ) {
     /* $('.animated').appear(function() {
@@ -347,7 +367,7 @@ function initPageAnim( container ) {
 
         }, {accY: -50});
     //} else {
-        $('.animated').removeClass('hiding');
+        //$('.animated').removeClass('hiding');
     
 }
 

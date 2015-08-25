@@ -75,6 +75,17 @@
 }
 
 
+
+.hiding {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.visible {
+  filter: alpha(opacity=1);
+  opacity: 1;
+}
+
 html {
     -webkit-font-smoothing: antialiased;
 }
@@ -217,6 +228,7 @@ h1 {
 
 .header .logo, header .hamburger {
     position:absolute;
+    opacity: 0;
 }
 .hamburger {
     top:50px;
@@ -411,11 +423,6 @@ h1 {
 .navigation .main-nav .sub-nav li span {
     text-align:center;
     margin-top:10px;
-}
-
-.hero-container {
-    position:fixed;
-    overflow:hidden;
 }
 
 .hero-image {
@@ -620,6 +627,7 @@ h1 {
     -moz-background-size:cover;
     background-size:cover;
     width:100%;
+    overflow:hidden;
 }
 
 .more-intel {
@@ -1377,13 +1385,4 @@ h1 {
 .timeTo figure.sec {
     width: 37px !important;
     margin-left:5px;
-}
-
-.hiding {
-  filter: alpha(opacity=1);
-  opacity: 1;
-}
-
-.visible {
-  opacity: 1;
 }
