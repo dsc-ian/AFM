@@ -90,6 +90,10 @@
     overflow:hidden;
 }
 
+.scroll-y {
+ overflow-y:scroll !important;
+}
+
 html {
     -webkit-font-smoothing: antialiased;
 }
@@ -98,7 +102,14 @@ body {
     font-family: 'Roboto', sans-serif; 
 }
 
-
+.hero-overlay2 {
+    background: url('../img/hero-img2.jpg') no-repeat center top;
+    background-attachment: fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    overflow-x:hidden;
+}
 h1 {
     font-family: 'Gotham-Ultra', sans-serif;
     font-size:50px;
@@ -453,12 +464,14 @@ h1 {
 }
 
 .hero-image {
-    background: url('../img/hero-img2.jpg') no-repeat center top;
+   /* background: url('../img/hero-img2.jpg') no-repeat center top;
     background-attachment: fixed;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     background-size:cover;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:hidden;*/
+
 }
 
 
@@ -974,6 +987,13 @@ h1 {
     position:absolute !important;
     top:auto;
 }
+
+.mobile .intel-hide .header.nav-active {
+    top:0 !important;
+}
+.mobile .intel-hide .navigation {
+    position:fixed;
+}
 .mobile .auction-timer {
     position:absolute;
     bottom:0;
@@ -987,6 +1007,9 @@ h1 {
     background:url('../img/mobile-hero-image.jpg') center center / cover no-repeat;
 }
 
+.mobile .hero-overlay2 {
+    display:none;
+}
 
 
 
