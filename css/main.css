@@ -86,6 +86,10 @@
   opacity: 1;
 }
 
+.scroll-lock {
+    overflow:hidden;
+}
+
 html {
     -webkit-font-smoothing: antialiased;
 }
@@ -104,6 +108,7 @@ h1 {
 
 .wrapper {
     position:relative;
+    overflow-x:hidden;
 }
 
 .get-intel {
@@ -193,11 +198,11 @@ h1 {
 }
 
 .intel-active .hero-image {
-    background-attachment: initial;
+    background-attachment: fixed;
 }
 
 .intel-active .hero-overlay {
-    background-attachment: initial;
+    background-attachment: fixed;
 }
 
 .intel-active .hero-image .container {
@@ -205,11 +210,33 @@ h1 {
     height:100%;
 }
 
+
+.intel-hide .header {
+    position:fixed !important;
+    top:0;
+}
+
+
+.scrolling .hero-image {
+    background-attachment: fixed;
+}
+
+.scrolling .hero-overlay {
+    background-attachment: fixed;
+}
+
+.intel-hide .hero-image .container {
+    position:fixed !important;
+    height:100%;
+    top:0;
+}
+
+/*
 .intel-active .auction-timer {
     position:absolute;
     bottom:205px;
 }
-
+*/
 .header {
     position:fixed;
     width:100%;
@@ -788,7 +815,6 @@ h1 {
 
 .hero-image h1 {
     text-align:center;
-    font-size:50px;
     color:#ffcc00;
     text-transform: uppercase;
     margin-top:80px;
@@ -945,7 +971,8 @@ h1 {
     background-attachment: initial;
 }
 .mobile .header, .mobile .hero-image .container {
-    position:absolute;
+    position:absolute !important;
+    top:auto;
 }
 .mobile .auction-timer {
     position:absolute;
@@ -979,10 +1006,7 @@ h1 {
 }
 
 @media (max-width: 1200px) {
-    .hamburger.active {
-        right:0;
-        top:0;
-    }
+
    
     .navigation {
         overflow:auto;
@@ -1043,7 +1067,7 @@ h1 {
 
 @media (max-width: 992px) {
 
-    .hero-image h1 {
+    h1 {
         font-size:40px;
     }
 
@@ -1070,6 +1094,21 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    h1 {
+        font-size:40px;
+    }
+    .more-intel h1 {
+        font-size:30px;
+    }
+
+    .about p {
+        font-size:24px;
+    }
+
+    .about {
+        padding: 120px 0 60px;
+    }
+
     .get-intel .signup {
         width:auto;
         padding:8px 19px;
@@ -1077,162 +1116,22 @@ h1 {
     .footer-block:first-child {
         width:100% !important;
     }
-    .hero-image h1 {
-        margin-top:30%;
-    }
-}
-
-@media (max-width: 600px) {
-    .get-intel h1 {
-        font-size: 20px;
-    }
-    .get-intel p {
-        font-size: 7px;
-    }
-
-    .get-intel .signup {
-        font-size:15px;  
-        padding:6px 19px;
-    }
-
-    .get-intel {
-        height:50px;
-    }
-
-    .btn-close span {
-        width:30px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .header {
-        height:175px;
-    }
-
-    .header .logo {
-        width:180px;
-        top: -15px;
-    }
-
-    .hamburger {
-        right:20px;
-        top:30px;
-    }
 
     .hero-image h1 {
-        font-size:20px;
-        margin-top:35%;
+        margin-top:220px;
     }
 
-    .vehicle-type h1 {
-        font-size:18px;
+    .mobile .intel-active .header.nav-active {
+        position:fixed !important; 
     }
 
-    .vehicle-type .desc p {
-        font-size:12px;
+    .mobile .navigation {
+        padding: 0 0 50px;
     }
 
-
-    .about {
-        padding: 100px 0 70px;
+    .scrolling .mobile .intel-active .header.nav-active {
+        position:fixed !important;
     }
-    .about h1 {
-        font-size:25px;
-    }
-    .about p {
-        font-size:15px;
-    }
-
-    .about p.sub-text {
-        font-size:12px;
-    }
-
-    .btn {
-        font-size:12px;
-        margin:20px 20px 0 0;
-    }
-
-
-
-}
-
-
-@media (max-width: 420px) {
-    .get-intel h1 {
-        font-size:16px;
-    }
-    .get-intel p {
-        font-size: 5px;
-    }
-    .get-intel .signup {
-        padding: 3px 19px;
-        margin: 10px 0 0;
-    }
-}
-
-
-@media (max-width: 320px) {
-    .get-intel h1 {
-        font-size: 15px;
-    }
-    .get-intel .signup {
-        font-size:10px;
-        padding:7px 19px;
-    }
-    .btn-close {
-        right: 10px;
-        top:5px;
-    }
-    .btn-close span {
-        width: 20px;
-    }
-    .get-intel .container {
-        padding: 0 12% 0 10px;
-    }
-    .header .logo {
-        width:115px;
-        top: -15px;
-    }
-   
-}
-
-
-@media (min-width: 992px) {
-    
-    .about p { 
-        max-width:720px;
-    }
-
-    .vehicle-type .desc {
-        max-width: 470px;
-    }
-
-    .more-intel .container {
-        width:auto;
-    }
-
-
-
-}
-
-
-@media (min-width: 768px) {
-
-    .more-intel .container, .vehicle-type .container {
-        width: 100%;
-        padding:0 10px;
-    }
-
-    .vehicle-type .desc {
-        padding: 40px 10px 25px;
-        max-width:465px;
-    }
-
-}
-
-@media (max-width: 768px) {
-
     .more-intel .tile-item {
         float:none;
         display:block;
@@ -1292,9 +1191,208 @@ h1 {
     .footer .copyright p, .footer .copyright .terms-link {
         float:none;
     }
+}
+
+
+
+
+@media (max-width: 639px) { 
+     h1 {
+        font-size:30px;
+     }
+}
+
+@media (max-width: 600px) {
+    .get-intel h1 {
+        font-size: 20px;
+    }
+    .get-intel p {
+        font-size: 7px;
+    }
+
+    .get-intel .signup {
+        font-size:15px;  
+        padding:6px 19px;
+    }
+
+    .get-intel {
+        height:50px;
+    }
+
+    .btn-close {
+        top:10px;
+    }
+
+    .btn-close span {
+        width:30px;
+    }
 
 }
 
+@media (max-width: 480px) {
+    h1 {
+        font-size:20px;
+    }
+    .header {
+        height:175px;
+    }
+
+    .header .logo {
+        width:180px;
+        top: -15px;
+    }
+
+    .hero-image h1 {
+        margin-top:150px;
+    }
+
+    .hamburger, .hamburger.active {
+        right:20px;
+        top:30px;
+    }
+
+    .vehicle-type h1 {
+        font-size:18px;
+    }
+    .vehicle-type .desc {
+        padding:25px 0;
+    }
+    .vehicle-type .desc p {
+        font-size:12px;
+    }
+
+    .more-intel h1 {
+        font-size:26px;
+    }
+
+    .about {
+        padding: 100px 0 70px;
+    }
+    .about h1 {
+        font-size:25px;
+    }
+    .about p {
+        font-size:15px;
+    }
+
+    .about p.sub-text {
+        font-size:12px;
+    }
+
+    .btn {
+        font-size:12px;
+        margin:20px 20px 0 0;
+    }
+    .timer-wrapper .auction-timer {
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        transform: scale(0.7);
+        left:-20px;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .get-intel h1 {
+        font-size:16px;
+    }
+    .get-intel p {
+        font-size: 5px;
+    }
+    .get-intel .signup {
+        padding: 3px 19px;
+        margin: 10px 0 0;
+    }
+    
+    .btn-close {
+        right: 10px;
+        top:5px;
+    }
+    .btn-close span {
+        width: 20px;
+    }
+    .get-intel .signup {
+        font-size:10px;
+        padding:7px 19px;
+    }
+
+    .get-intel .content {
+        padding: 13px 0 0;
+    }
+}
+
+@media (max-width:400px) {
+
+    .timer-wrapper .auction-timer {
+        left:-40px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .timer-wrapper .auction-timer {
+        -webkit-transform: scale(0.6);
+        -moz-transform: scale(0.6);
+        transform: scale(0.6);
+        left:-60px;
+    }
+}
+
+
+@media (max-width: 340px) {
+    .timer-wrapper .auction-timer {
+        left:-80px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .get-intel h1 {
+        font-size: 15px;
+    }
+    .get-intel .container {
+        padding: 0 12% 0 10px;
+    }
+    .header .logo {
+        width:115px;
+        top: -15px;
+    }
+   
+}
+
+
+@media (min-width: 992px) {
+    
+    .about p { 
+        max-width:720px;
+    }
+
+    .vehicle-type .desc {
+        max-width: 470px;
+    }
+
+    .more-intel .container {
+        width:auto;
+    }
+
+
+
+}
+
+
+@media (min-width: 768px) {
+
+    .more-intel .container, .vehicle-type .container {
+        width: 100%;
+        padding:0 10px;
+    }
+
+    .vehicle-type .desc {
+        padding: 40px 10px 25px;
+        max-width:465px;
+    }
+
+}
 
 
 
