@@ -20,7 +20,6 @@ $(function() {
     }, 3000);
 
 
-
 	if(_viewport.width <= 768) {
 		$('body').addClass('mobile');	
 	} else {
@@ -32,8 +31,13 @@ $(function() {
 	} else {
 		_navSubHeight = '192px';
 	}
+	if(!$('body').hasClass('mobile')) {
 
-	$.stellar();
+		$.stellar({
+		    horizontalScrolling: false,
+		    responsive: true
+		});
+	}
 
 	imageHero();
 	initPageAnim();
@@ -267,6 +271,7 @@ $(window).scroll(function(e) {
     var height = $(window).scrollTop();
     var heroHeight = $('.hero-overlay2').scrollTop();
 
+	parallax();
 
 	if($('.wrapper').attr('id') != 'vehicle-overview') {
 
@@ -378,6 +383,7 @@ $(window).scroll(function(e) {
 			    if(height > 100 ) {
 			    	$('.wrapper').addClass('scrolling')
 	   	 			$('.wrapper').addClass('intel-hide');
+
 	   	 			//$('.hero-image').addClass('scroll-y');
 			    } else {
 	   	 			$('.wrapper').removeClass('intel-hide');
@@ -681,4 +687,31 @@ function initPageAnim( container ) {
     	$('.animated').removeClass('hiding');
     }
 }
+function parallax() {
+	if ($('.wrapper').hasClass('intel-hide') && !$('body').hasClass('mobile')) {
+		parallaxBackground( $('.hero-overlay'), 0.7 );
+	};
+}
 
+function parallaxBackground( imgDiv, multiplier ) {
+
+	if ( imgDiv.size() > 0 ) {
+		var wH = window.innerHeight ? window.innerHeight : jQuery(window).height();
+		var imgPar = imgDiv;
+
+		//var imgParPercY = ( imgPar.offset().top + imgPar.outerHeight(false)/2 - jQuery(window).scrollTop() ) / imgPar.outerHeight(false);
+		//var imgParPercY = ( imgPar.offset().top - jQuery(window).scrollTop() ) / imgPar.outerHeight(false);
+		var imgParPercY = (  jQuery(window).scrollTop() );
+
+		//console.log(imgParPercY);
+		var parallaxHeight = imgPar.outerHeight(false);
+
+		//console.log( imgParPercY, parallaxHeight );
+
+		var newH = Math.round( (imgParPercY) * multiplier/4 );
+		imgDiv.css({
+			'top': ' -' + newH + 'px'
+		});
+		console.log(newH);
+	}
+}

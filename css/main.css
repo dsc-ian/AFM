@@ -214,6 +214,7 @@ h1 {
 
 .intel-active .get-intel {
     top:0;
+    z-index:1;
 }
 /*
 .intel-active .hero-image {
@@ -654,6 +655,12 @@ h1 {
 }
 
 /*
+
+.intel-hide .hero-overlay {
+    position:absolute !important;
+    background-attachment: fixed !important; 
+    top:0;
+}
 .hero-overlay, .hero-image {
     position:absolute;
 }
@@ -1159,7 +1166,7 @@ h1 {
 
 
 #vehicle .hero-overlay {
-    background:url('../img/vehicle-1.jpg') no-repeat center top;
+    background:url('../img/hero-image3.jpg') no-repeat center top;
     background-attachment: initial;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1215,6 +1222,7 @@ h1 {
 #vehicle .section-parallax {
     min-height:500px;
     position:relative;
+    background-attachment: fixed
 }
 
 .overview-container {
@@ -1429,6 +1437,7 @@ h1 {
     display:block;
     padding:60px 0;
     height:100% !important;
+    background-attachment: initial !important
 }
 
 
@@ -1586,10 +1595,12 @@ h1 {
 
 .video-item:first-child {
     padding-left:0;
+    padding-right:20px;
 }
 
 .video-item:last-child {
     padding-right:0;
+    padding-left:20px;
 }
 
 .video-item {
@@ -1783,7 +1794,9 @@ h1 {
     top:auto;
 }
 
-
+.mobile .section-parallax {
+    background-attachment: initial !important;
+}
 
 
 
@@ -2022,7 +2035,7 @@ h1 {
     }
 
     .video-item {
-        padding:0;
+        padding:0 !important;
     }
 
     .vehicle-navigation {
@@ -2285,6 +2298,7 @@ h1 {
     .active-nav .header {
         position:fixed !important;
     }
+
     .hero-image {
         margin-top:-60px;
     }
