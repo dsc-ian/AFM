@@ -28,7 +28,7 @@
     <body>
 
 
-        <div id="vehicle-overview" class="wrapper">
+        <div id="vehicle-overview" class="wrapper wrapper-2">
 
             <div class="get-intel clearfix">
                 <div class="container">
@@ -45,38 +45,43 @@
             </div>
 
             <div class="header clearfix">
-                <a href="#" class="logo"><img src="img/logo.png"></a>
+
+                <div class="main-header">
+                    <a href="index.html" class="logo"><img src="img/logo.png"></a>
+                    <a href="index.html" class="mobile-logo"><img src="img/logo-nav.jpg"></a>
+                    <a href="#" class="hamburger">
+                        <span class="bar-1 patty-1"></span>
+                        <span class="bar-2 patty-2"></span>
+                        <span class="bar-3 patty-3"></span>
+                    </a>
+                </div>           
+
                 <div class="navigation clearfix">
-                    <a href="#" class="sub-logo"><img src="img/logo-nav.jpg"></a>
+                    <a href="index.html" class="sub-logo"><img src="img/logo-nav.jpg"></a>
                     <ul class="main-nav">
-                        <li class="active"><a href="#">HQ<span>Home</span></a></li>
+                        <li><a href="index.html">HQ<span>Home</span></a></li>
                         <li>
-                            <a href="#">Buy<span>How To Purchase</span></a>
+                            <a href="showroom.html">Buy<span>How To Purchase</span></a>
                         </li>
-                        <li class="has-sub">
-                            <a href="#">Vehicles<span>Inspect The Vehicles</span></a>
+                        <li class="has-sub active">
+                            <a href="vehicle.html">Vehicles<span>Inspect The Vehicles</span></a>
 
                             <ul class="sub-nav">
-                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
-                                <li class="sub-item"><a href="#"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="vehicle-overview.html"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="vehicle-overview.html"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="vehicle-overview.html"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="vehicle-overview.html"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
+                                <li class="sub-item"><a href="vehicle-overview.html"><img src="img/menu-img1.jpg"><span>Trucks</span></a></li>
                             </ul>
                         </li>
                         <li><a href="#">Field Report<span>Get The Last Intel</span></a></li>
-                        <li><a href="#">Reinforcement<span>Get Support</span></a></li>
+                        <li><a href="contact.html">Reinforcement<span>Get Support</span></a></li>
                     </ul>
-                </div>
-
-                <a href="#" class="hamburger">
-                    <span class="bar-1 patty-1"></span>
-                    <span class="bar-2 patty-2"></span>
-                    <span class="bar-3 patty-3"></span>
-                </a>
-
-                <div class="nav-cont">
-                    <a href="#" class="mobile-logo"><img src="img/logo-nav.jpg"></a>
+                     <a href="#" class="hamburger active">
+                        <span class="bar-1 patty-1"></span>
+                        <span class="bar-2 patty-2"></span>
+                        <span class="bar-3 patty-3"></span>
+                    </a>
                 </div>
             </div>
 
@@ -118,10 +123,28 @@
                         </div>
                     </div>   
                 </div>
+
+
+                <div class="timer-wrapper section-row">
+                    <div class="auction-timer auction-timer-wrapper">
+                        <p>Next Auction Starts In</p>
+
+                        <div id="countdown3" class="countdown"></div>
+
+                        <a href="#" class="engage-btn">
+                            <span class="fa fa-angle-left angle-3"></span>
+                            <span class="fa fa-angle-left angle-2"></span>
+                            <span class="fa fa-angle-left angle-1"></span>
+                            <div>Engage</div>
+                            <span class="fa fa-angle-right angle-1"></span>
+                            <span class="fa fa-angle-right angle-2"></span>
+                            <span class="fa fa-angle-right angle-3"></span>
+                        </a>
+                    </div>
+                </div>
                 <div class="vehicle-container section-row clearfix">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
-                        <div class="vehicle-row col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
-                            <div class="vehicle-row-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                       
+                            <div class="vehicle-row-item col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="100">
                                 <img src="img/v-img1.jpg">
                                 <div class="modal fade">
                                      <img src="img/v-img1.jpg">
@@ -131,7 +154,7 @@
                                     <a href="#" class="modal-btn">Click to view range</a>
                                 </div>
                             </div>
-                            <div class="vehicle-row-item  col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="vehicle-row-item  col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="200">
                                 <img src="img/v-img2.jpg">
                                 <div class="modal fade">
                                      <img src="img/v-img2.jpg">
@@ -141,9 +164,9 @@
                                     <a href="#" class="modal-btn">Click to view range</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="vehicle-row col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
-                            <div class="vehicle-row-item col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                       
+                      
+                            <div class="vehicle-row-item col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="300">
                                 <img src="img/v-img3.jpg">
                                 <div class="modal fade">
                                      <img src="img/v-img3.jpg">
@@ -153,7 +176,7 @@
                                     <a href="#" class="modal-btn">Click to view range</a>
                                 </div>
                             </div>
-                            <div class="vehicle-row-item  col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="vehicle-row-item  col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="400">
                                 <img src="img/v-img4.jpg">
                                 <div class="modal fade">
                                      <img src="img/v-img4.jpg">
@@ -163,9 +186,9 @@
                                     <a href="#" class="modal-btn">Click to view range</a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="vehicle-row col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
-                            <div class="vehicle-row-item col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    
+                      
+                            <div class="vehicle-row-item col-lg-12 col-md-12 col-sm-12 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="500">
                                 <img src="img/v-img5.jpg">
                                 <div class="modal fade">
                                      <img src="img/v-img5.jpg">
@@ -175,8 +198,7 @@
                                     <a href="#" class="modal-btn">Click to view range</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
 

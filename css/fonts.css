@@ -1,0 +1,176 @@
+
+
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+
+
+@font-face {
+    font-family: 'Squares';
+    src: url('../fonts/squares_bold_free-webfont.eot');
+    src: url('../fonts/squares_bold_free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/squares_bold_free-webfont.woff2') format('woff2'),
+         url('../fonts/squares_bold_free-webfont.woff') format('woff'),
+         url('../fonts/squares_bold_free-webfont.ttf') format('truetype'),
+         url('../fonts/squares_bold_free-webfont.svg#squares_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Ultra';
+    src: url('../fonts/gotham-ultra-webfont.eot');
+    src: url('../fonts/gotham-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-ultra-webfont.woff') format('woff'),
+         url('../fonts/gotham-ultra-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-ultra-webfont.svg#gotham-ultra-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('../fonts/gotham-bold-webfont.eot');
+    src: url('../fonts/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-bold-webfont.woff') format('woff'),
+         url('../fonts/gotham-bold-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-bold-webfont.svg#GothamBoldRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('../fonts/gotham-medium-webfont.eot');
+    src: url('../fonts/gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-medium-webfont.woff') format('woff'),
+         url('../fonts/gotham-medium-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-medium-webfont.svg#GothamMediumRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/gotham-light-webfont.eot');
+    src: url('../fonts/gotham-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-light-webfont.woff') format('woff'),
+         url('../fonts/gotham-light-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-light-webfont.svg#GothamLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../fonts/proximanova-bold.eot');
+    src: url('../fonts/proximanova-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-bold.woff2') format('woff2'),
+         url('../fonts/proximanova-bold.woff') format('woff'),
+         url('../fonts/proximanova-bold.ttf') format('truetype'),
+         url('../fonts/proximanova-bold.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-ExtraBold';
+    src: url('../fonts/proximanova-extrabold-webfont.eot');
+    src: url('../fonts/proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-extrabold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-extrabold-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-extrabold-webfont.svg#proxima_nova_thbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-SemiBold';
+    src: url('../fonts/proximanova-semibold-webfont.eot');
+    src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    display:inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    -webkit-background-size:100% auto !important;
+    -moz-background-size:100% auto !important;
+    background-size:100% auto !important;
+}
+
+.icon-22 {
+    width:22px;
+    height:21px;
+}
+
+.icon-27 {
+    width:27px;
+    height:21px;
+}
+
+.icon-68 {
+    width:68px;
+    height:60px;
+}
+
+.icon-tick {
+    background:url('../img/icon-tick.png') no-repeat center center;
+}
+
+.icon-view {
+    background:url('../img/icon-view.png') no-repeat center center;
+}
+
+.icon-safety {
+    background:url('../img/icon-safety.png') no-repeat center center;
+}
+
+.icon-print {
+    background:url('../img/icon-print.png') no-repeat center center;
+}
+
+.icon-phone {
+    background:url('../img/icon-phone.png') no-repeat center center;
+}
+
+.icon-share {
+    background:url('../img/icon-share.png') no-repeat center center;
+}
+
+.icon-terrain {
+    background:url('../img/icon-terrain.png') no-repeat center center;
+}
+
+.icon-water {
+    background:url('../img/icon-water.png') no-repeat center center;
+}
+
+.icon-heat {
+    background:url('../img/icon-heat.png') no-repeat center center;
+}
+
+.icon-cold {
+    background:url('../img/icon-cold.png') no-repeat center center;
+}
+
+.icon-download {
+    width:20px;
+    height:18px;
+    background:url('../img/icon-download.png') no-repeat center center;
+}
+
+.icon-auction {
+    background:url('../img/icon-auction.png') no-repeat center center;
+    width:14px;
+    height:14px;
+    top:0;
+}
+

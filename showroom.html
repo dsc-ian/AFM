@@ -17,6 +17,7 @@
 
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/timeTo.css">
+        <link rel="stylesheet" href="css/custom-animation.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
 
@@ -27,7 +28,7 @@
     <body>
 
 
-        <div id="home" class="wrapper">
+        <div id="showroom" class="wrapper wrapper-2">
 
             <div class="get-intel clearfix">
                 <div class="container">
@@ -58,8 +59,8 @@
                 <div class="navigation clearfix">
                     <a href="index.html" class="sub-logo"><img src="img/logo-nav.jpg"></a>
                     <ul class="main-nav">
-                        <li class="active"><a href="index.html">HQ<span>Home</span></a></li>
-                        <li>
+                        <li><a href="index.html">HQ<span>Home</span></a></li>
+                        <li class="active">
                             <a href="showroom.html">Buy<span>How To Purchase</span></a>
                         </li>
                         <li class="has-sub">
@@ -85,116 +86,37 @@
             </div>
 
             <div class="wrap">
+                <div class="showrooms clearfix section-row">
+                    <div class="container">
 
-                <div class="hero-image">
-                    <div class="hero-overlay" >
-                        <div class="container">
-                            <h1 class="animated hiding" data-animation="fadeIn" data-delay="800">Own the ultimate <br>in off road hardware</h1>
-                            <div class="auction-timer auction-timer-wrapper animated hiding" data-animation="fadeIn" data-delay="1200">
-                                <p>Next Auction Starts In</p>
-
-                                <div id="countdown1" class="countdown"></div>
-
-                                <a href="#" class="engage-btn">
-                                    <span class="fa fa-angle-left angle-3"></span>
-                                    <span class="fa fa-angle-left angle-2"></span>
-                                    <span class="fa fa-angle-left angle-1"></span>
-                                    <div>Engage</div>
-                                    <span class="fa fa-angle-right angle-1"></span>
-                                    <span class="fa fa-angle-right angle-2"></span>
-                                    <span class="fa fa-angle-right angle-3"></span>
-                                </a>
+                            <h1 class="animated hiding" data-animation="fadeIn" data-delay="100">Showroom</h1>
+                            <div class="showrooms-details col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="200">
+                                <p>There is no auction on at the moment. To get the latest intel about when the next auction starts, sign up to our newsletter.</p>
+                                <br>
+                                <p>46 Airds Road, Minto, NSW 2566</p>
+                                <p>PO Box 5172, Minto, NSW 2566</p>
+                                <p>Phone: <a href="tel:0287961800">02 8796 1800</a></p>
+                                <p>Fax: <a href="tel:0287950465">02 8795 0465</a></p>
+                                <p>Email: <a href="mailto:info@australianfrontlinemachinery.com.au">info@australianfrontlinemachinery.com.au</a></p>
                             </div>
-                        </div>
-                    </div>   
-                </div>
-                <div class="hero-overlay2"></div>   
-
-                <div class="timer-wrapper section-row">
-                    <div class="auction-timer auction-timer-wrapper">
-                                    <p>Next Auction Starts In</p>
-
-                                    <div id="countdown3" class="countdown"></div>
-
-                                    <a href="#" class="engage-btn">
-                                        <span class="fa fa-angle-left angle-3"></span>
-                                        <span class="fa fa-angle-left angle-2"></span>
-                                        <span class="fa fa-angle-left angle-1"></span>
-                                        <div>Engage</div>
-                                        <span class="fa fa-angle-right angle-1"></span>
-                                        <span class="fa fa-angle-right angle-2"></span>
-                                        <span class="fa fa-angle-right angle-3"></span>
-                                    </a>
+                            <div class="showroom-location col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="300">
+                                <div class="map">
+                                    <img src="img/map.jpg">
                                 </div>
-                </div>
-                <div class="about section-row">
-                    <div class="container">
-                        <h1 class="animated hiding" data-animation="fadeIn" data-delay="100" >What is Australian <br> Frontline Machinery?</h1>
-                        <p class="animated hiding" data-animation="fadeIn" data-delay="100">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa natus error sit voluptatem quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                        <p class="sub-text animated hiding" data-animation="fadeIn" data-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <span>Duis aute irure dolor</span> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <a href="#" class="btn animated hiding" data-animation="fadeIn" data-delay="100">Get The Intel First</a>
-                        <a href="#" class="btn animated hiding" data-animation="fadeIn"data-delay="200">Field Report</a>
-
+                            </div>
                     </div>
                 </div>
-                <div class="vehicle-type clearfix section-row">
-                    <div class="container">
-                        <div class="desc">
-                        <h1 class="animated hiding" data-animation="fadeIn" data-delay="100">Vehicle Types</h1>
-                        <p class="animated hiding" data-animation="fadeIn"data-delay="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo.</p>
-                        </div>
-                        
-                        
-                        <div class="counter-cont animated hiding" data-delay="200">
-                            <img src="img/counter-container.png">
-                            <div class="auction-timer-wrapper">
-                                <p>Next Auction Starts In</p>
+                <div class="upcoming-auctions seciont-row clearfix">
+                        <div class="container">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                <h2 class="animated hiding" data-animation="fadeIn" data-delay="100">Upcoming Auctions</h1>
+                                <p class="animated hiding" data-animation="fadeIn" data-delay="200">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim </p>
+                            </div>
 
-                                 <div id="countdown2" class="countdown"></div>
-                               
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="300">
+                                <a href="#" class="btn">Sign Up</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="vehicle-type-wrapper clearfix">
-                        <div class="vehicle-item animated hiding" data-animation="fadeIn" data-delay="200">
-                            <img src="img/vehicle-img1.jpg" data-desktop-image="vehicle-img1.jpg" data-mobile-image="m-vehicle-img1.jpg">
-                            <p>Trucks</p>
-                        </div>
-                        <div class="vehicle-item animated hiding" data-animation="fadeIn" data-delay="300">
-                            <img src="img/vehicle-img2.jpg" data-desktop-image="vehicle-img2.jpg" data-mobile-image="m-vehicle-img2.jpg">
-                            <p>Landrovers</p>
-                        </div>
-                        <div class="vehicle-item animated hiding" data-animation="fadeIn" data-delay="400">
-                            <img src="img/vehicle-img3.jpg" data-desktop-image="vehicle-img3.jpg" data-mobile-image="m-vehicle-img3.jpg">
-                            <p>Trailers</p>
-                        </div>
-                        <div class="vehicle-item animated hiding" data-animation="fadeIn" data-delay="500">
-                            <img src="img/vehicle-img4.jpg" data-desktop-image="vehicle-img4.jpg" data-mobile-image="m-vehicle-img4.jpg">
-                            <p>Motorcycles</p>
-                        </div>
-                        <div class="vehicle-item animated hiding" data-animation="fadeIn" data-delay="600">
-                            <img src="img/vehicle-img5.jpg" data-desktop-image="vehicle-img5.jpg" data-mobile-image="m-vehicle-img5.jpg">
-                            <p>Uninmogs</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="more-intel section-row">
-                    <div class="container">
-                        <h1 class="animated hiding" data-animation="fadeIn" data-delay="100">More Intel</h1>
-                        <a href="#" class="tile-item animated hiding" data-animation="fadeIn" data-delay="300">
-                                <img src="img/tile-img1.png">
-                                <p>Field Report</p>
-                        </a>
-                        <a href="#" class="tile-item animated hiding" data-animation="fadeIn" data-delay="400">
-                                <img src="img/tile-img2.png">
-                                <p>History</p>
-                        </a>
-                        <a href="#" class="tile-item animated hiding" data-animation="fadeIn" data-delay="500">
-                                <img src="img/tile-img3.png">
-                                <p>Connect</p>
-                        </a>
-                    </div>
                 </div>
             </div>
 
@@ -203,14 +125,14 @@
                 <div class="footer-wrap">
                     <div class="container">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="footer-block col-lg-3 col-md-3 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="100">
+                            <div class="footer-block col-lg-3 col-md-3 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="300">
                                 <h1>Contact Us</h1>
                                 <p>46 Airds Road, Minto, NSW 2566<br>
                                     PO Box 5172, Minto, NSW 2566<br>
                                     Phone: 02 8796 1800<br>
                                     Fax: 02 8795 0465</p>
                             </div>
-                            <div class="footer-block col-lg-3 col-md-3 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="300">
+                            <div class="footer-block col-lg-3 col-md-3 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="400">
                                 <h1>Vehicle Range</h1>
                                 <ul>
                                     <li><a href="#">Land Rover 4×4’s</a></li>
@@ -275,6 +197,8 @@
         <script src="js/vendor/jquery-1.11.2.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/jquery.stellar.js"></script>
+        <script src="js/vendor/TweenMax.min.js"></script>
+        <script src="js/vendor/ScrollToPlugin.min.js"></script>
         <script src="js/vendor/jquery.timeTo.js"></script>
         <script src="js/vendor/jquery.appear.js"></script>
         <script src="js/main.js"></script>

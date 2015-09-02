@@ -127,6 +127,16 @@
 
 }
 
+.hiding {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.visible {
+  filter: alpha(opacity=1);
+  opacity: 1;
+}
+
 /*
 @-webkit-keyframes wipe {
     0% {
