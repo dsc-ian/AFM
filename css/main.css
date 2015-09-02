@@ -3,18 +3,16 @@
 /* ==========================================================================
    Author's custom styl
    ========================================================================== */
-div, h1, a, span {
-     -webkit-backface-visibility: hidden;
-}
+
 
 html {
     -webkit-font-smoothing: antialiased;
-
-     -webkit-backface-visibility: hidden;
-   
+    -webkit-backface-visibility: hidden;
 }
 
-
+a {
+    cursor:pointer !important;
+}
 
 body {
     font-family: 'Roboto', sans-serif; 
@@ -174,9 +172,9 @@ h1 {
 .header.navigation-active .main-header .logo, .header.main-header-active .main-header .logo, .header.scrolling .main-header .logo {
     position:absolute !important;
     top:-500px;    
-    -webkit-transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) !important;
-    -o-transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) !important;
-    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) !important;
+    -webkit-transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
+    -o-transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
+    transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }   
@@ -196,18 +194,21 @@ h1 {
 
 .intel-hide .logo {
     position:fixed;
-    -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    -o-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    -webkit-transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    -o-transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
     -webkit-transition-delay: 0.5s !important;
     transition-delay: 0.5s !important;
 }
 
 .navigation-active .logo, .main-header-active .logo,.scrolling .logo {
     position:fixed;
-    -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    -o-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    
+
+    -webkit-transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    -o-transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    
     -webkit-transition-delay: 0.5s !important;
     transition-delay: 0.5s !important;
 }
@@ -217,16 +218,18 @@ h1 {
     position:absolute;
     top:-100px;
     z-index:9;
-      -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    -o-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+      -webkit-transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    -o-transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    transition: all 0.7 cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    
     -webkit-transition-delay: 0.5s !important;
     transition-delay: 0.5s !important;
 
 
 }
 
-
+/* easeInExpo cubic-bezier(0.95, 0.05, 0.795, 0.035)
+    easeOutExpo cubic-bezier(0.19, 1, 0.22, 1) */
 
 .navigation .hamburger span {
     background-color:#fff;
@@ -237,9 +240,9 @@ h1 {
     right:74px;
     position:absolute;
     z-index:9999;
-    -webkit-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
     display:block;
     -webkit-transition-delay: 0.5s;
     transition-delay: 0.5s;
@@ -247,9 +250,9 @@ h1 {
 
 .navigation-active .hamburger, .main-header-active .hamburger, .scrolling .hamburger {
   top:-50px;   
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+    -webkit-transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    -o-transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }
@@ -306,6 +309,9 @@ h1 {
     display:inline-block;
 }
 
+/* easeInExpo cubic-bezier(0.95, 0.05, 0.795, 0.035)
+    easeOutExpo cubic-bezier(0.19, 1, 0.22, 1) */
+
 .navigation {
     position:fixed;
     padding:0 0 0;
@@ -314,46 +320,50 @@ h1 {
     width:100%;
     vertical-align: middle;
     display:block;
-    top:-400px;
+    top:-131px;
     z-index:999;
-    -webkit-transition: all 0.7s ease-out;
-    -o-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    -o-transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
      
 }
 
 .intel-active .navigation-active .navigation {
     top:0;
     position:absolute;
-    -webkit-transition: all 0.7s ease-out;
-    -o-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 .intel-active .scrolling .navigation {
     top:0;
     position:fixed;
-    -webkit-transition: all 0.7ease-out;
-    -o-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7 cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    -o-transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 .animate .navigation {
     position:absolute !important;
-    top:-400px !important;
-    -webkit-transition: all 0.7s ease-in !important;
-    -o-transition: all 0.7s ease-in !important;
-    transition: all 0.7s ease-in !important;
+    top:-131px !important;
+}
+
+.intel-hide.animate .navigation {
+    position:fixed !important;
+    top:-131px !important;
+    -webkit-transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) !important; 
+    -o-transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
+    transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) !important;
 }
 
 .intel-hide .navigation-active .navigation, .intel-hide .scrolling .navigation  {
     top:0;
     position:fixed !important;
-    -webkit-transition: all 0.7s ease-in;
-    -o-transition: all 0.7s ease-in;
-    transition: all 0.7 ease-in;
-
+    -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 
 .navigation-active.nav-animate .navigation, .scrolling.nav-animate .navigation {
     -webkit-transition-delay: 0.5s;
@@ -361,16 +371,16 @@ h1 {
 }
 
 .navigation-active .navigation, .scrolling .navigation {
-
     display:block;
     top:0; 
-    -webkit-transition: all 0.7s ease-out;
-    -o-transition: all 0.7s ease-out;
-    transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
-
 }
+
+
 
 /* << fix here >>
 .header.navigation-active {
@@ -645,7 +655,7 @@ h1 {
 */
 
 .hero-image .container {
-    position:fixed;
+    position:absolute;
     left:0;
     right:0;
     z-index:5;
@@ -659,10 +669,10 @@ h1 {
     background:url('../img/auction-bg.png') no-repeat center center;
     width:476px;
     height:188px;
-    position:fixed;
+    position:absolute;
     left:0;
     right:0;
-    bottom:85px;
+    bottom:300px;
     margin:0 auto;
     text-align:center;
     padding:20px 0 0;
@@ -827,10 +837,7 @@ h1 {
 }
 
 .more-intel {
-    background: url('../img/more-intel-bg.jpg') no-repeat center top;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    background-size:cover;
+    background: url('../img/grundge.jpg') repeat center top;
     width:100%;
 }
 
@@ -1198,14 +1205,11 @@ h1 {
 #vehicle .section-parallax {
     min-height:500px;
     position:relative;
-    background-attachment: fixed
+   
 }
 
 .overview-container {
-    background:url('../img/background-image.jpg') no-repeat center top;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    background-size:cover;
+    background:url('../img/grundge.jpg') repeat center top;
     padding:50px 0;
 }
 
@@ -1237,10 +1241,7 @@ h1 {
 
 
 .model-container {
-    background:url('../img/background-image.jpg') no-repeat center top;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    background-size:cover;
+    background:url('../img/grundge.jpg') repeat center top;
 }
 
 .videos-container {
@@ -1650,10 +1651,7 @@ h1 {
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     z-index:9;
-    background: url('../img/background-image.jpg') no-repeat center top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
+    background: url('../img/grundge.jpg') repeat center top;
 }
 
 #vehicle-overview .vehicle-type h1 {
@@ -1931,11 +1929,10 @@ h1 {
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     z-index: 9;
-    background: url('../img/background-image.jpg') no-repeat center top;
+    background: url('../img/grundge.jpg') repeat center top;
+    -webkit-background-size:100% auto;
+    -moz-background-size:100% auto;
     background-color:#000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
     padding:90px 0;
 }
 
@@ -1983,11 +1980,11 @@ h1 {
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     z-index: 9;
-    background: url('../img/background-image.jpg') no-repeat center top;
+    background: url('../img/grundge.jpg') no-repeat center top;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    background-size: 100% auto;
     background-color:#000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
 }
 
 

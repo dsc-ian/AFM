@@ -384,13 +384,15 @@
         var me = this;
         
         if($.support.transition) {
-            $ul.addClass('transition');
+            //$ul.addClass('transition');
             $ul.css({top:0});
 
             setTimeout(function() {
-                $ul.removeClass('transition');
-                $li.eq(1).html(n);
-                $ul.css({top:"-"+ data.height +"px"});
+                //edited
+                //$ul.removeClass('transition');
+                //$li.eq(1).html(n);
+                //$ul.css({top:"-"+ data.height +"px"});
+                $ul.css({top:"0px"});
 
                 if(step > 0 || digit != data.iSec) {
                     return;
@@ -417,7 +419,8 @@
         else {
             $ul.stop().animate({top:0}, 400, digit != data.iSec ? null : function() {
                 $li.eq(1).html(n);
-                $ul.css({top:"-"+ data.height +"px"});
+                //$ul.css({top:"-"+ data.height +"px"});
+                $ul.css({top: "0px"});
                 if(step > 0 || digit != data.iSec) {
                     return;
                 }
