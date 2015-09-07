@@ -2716,6 +2716,12 @@
         .wrapper-2 .wrap h1 {
             font-size:40px;
         }
+
+        #home .hero-overlay {
+            background: url('../img/hero-image-mobile.jpg') no-repeat center top;
+            background-size:cover;
+        }
+
         .more-intel h1 {
             font-size:30px;
         }
