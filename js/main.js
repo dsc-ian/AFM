@@ -307,17 +307,17 @@ $(window).scroll(function(e) {
 				}
 			}
 
-			if(height >= 998) {
+			/*if(height >= 1044) {
 				addRemoveClasses('.wrap-navigation', 'sticky', true);
 			} else {
 				addRemoveClasses('.wrap-navigation', 'sticky', false);
-			}
+			}*/
 
 			var targetHeight = 0;
 			if($('.wrapper').hasClass('intel-close')) {
-				targetHeight = 349;
+				targetHeight = 944;
 			} else {
-				targetHeight = 840;
+				targetHeight = 1044;
 			}
 
 			if(height >= targetHeight) {
@@ -341,7 +341,7 @@ $(window).scroll(function(e) {
 
 			}
 
-			if(height >= 0) {
+			if(height >= 1173) {
 				addRemoveClasses('.wrap-navigation', 'sticky', true);
 			} else {
 				addRemoveClasses('.wrap-navigation', 'sticky', false);

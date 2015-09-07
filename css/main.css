@@ -2247,9 +2247,6 @@
         display:none;
     }
 
-    .mobile .hero-image, .mobile .hero-overlay {
-        background:url('../img/mobile-hero-image.jpg') center center / cover no-repeat !important;
-    }
 
     .mobile .hero-overlay2 {
         display:none;
@@ -2835,7 +2832,7 @@
         }
 
         #vehicle .section-parallax {
-            min-height:240px;
+            min-height:440px;
         } 
 
         .contact .contact-form {
@@ -2975,7 +2972,7 @@
         #vehicle .hero-image, #vehicle .hero-overlay {
             height:auto !important;
             min-height: 390px;
-            background: url('../img/mobile-hero-image.jpg') center bottom / cover no-repeat !important;
+           
 
         }
         #overview {
@@ -2989,6 +2986,13 @@
         }
         .wrapper-2 .wrap p {
             font-size:20px;
+        }
+        .mobile .timer-wrapper {
+            background:none;
+            background-color:#000;
+        }
+        .auction-timer-wrapper .timer .timer-col.sec .dt-num {
+            display:none;
         }
     }
 
