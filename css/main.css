@@ -2719,6 +2719,8 @@
 
         #home .hero-overlay {
             background: url('../img/hero-image-mobile.jpg') no-repeat center top;
+            -webkit-background-size:cover;
+            -moz-background-size:cover;
             background-size:cover;
         }
 
