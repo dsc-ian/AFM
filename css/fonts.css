@@ -132,6 +132,7 @@
     width:20px;
     height:18px;
     background:url('../img/icon-download.png') no-repeat center center;
+    top:4px !important;
 }
 
 .icon-auction {

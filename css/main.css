@@ -10,7 +10,9 @@
 
     html {
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         -webkit-backface-visibility: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
     a {
@@ -62,13 +64,14 @@
 
     .wrapper {
         position:relative;
+        overflow-x:hidden;
     }
 
     .get-intel {
         height:100px;
         width:100%;
-        background:url('../img/get-intel.jpg') no-repeat center top;
-        display:table;
+        /*background:url('../img/get-intel.jpg') no-repeat center top;*/
+        background-color:#000;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -79,10 +82,12 @@
         -o-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;
         z-index:9999;
+        visibility: hidden;
     }
 
     .intel-active .get-intel {
         top:0;
+        visibility: visible;
     }
 
     .get-intel .container {
@@ -100,6 +105,10 @@
         margin:0;
         padding:0;
         text-transform: uppercase;
+    }
+
+    .mobile .get-intel p {
+        display:none;
     }
 
     .get-intel p {
@@ -196,6 +205,7 @@
         transition-delay: 0s;
     }   
 
+  
 
     .intel-active .main-header, .intel-close .main-header {
         top:0;
@@ -207,7 +217,31 @@
 
     .mobile-logo {
         display:none !important;
+        width: 50px;
+        margin: 3px 20px
     }
+
+    .mobile-logo img {
+        width:100%;
+    }
+
+    .header-active .hamburger span {
+        color:#fff;
+    }
+
+    .header-active.main-header {
+        position: fixed !important;
+        width: 100%;
+        background-color: #ffcc00;
+        height: 60px;
+    }
+    .header-active .mobile-logo  {
+        display:block;
+    }
+    .header-active .logo {
+        display:none;
+    }
+
 
     .intel-hide .logo {
         position:fixed;
@@ -337,7 +371,7 @@
         width:100%;
         vertical-align: middle;
         display:block;
-        top:-131px;
+        top:-132px;
         z-index:999;
         -webkit-transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
         -o-transition: all 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
@@ -363,7 +397,7 @@
 
     .animate .navigation {
         position:absolute !important;
-        top:-131px !important;
+        top:-132px !important;
     }
 
     .intel-hide.animate .navigation {
@@ -457,7 +491,7 @@
     .navigation .main-nav {
         list-style-type: none;
         margin:0;
-        padding:0;
+        padding:5px 0;
         text-align:center;
         position:relative;
     }
@@ -490,13 +524,14 @@
         display:block;
         width:100%;
         margin: 0 -24.5px;
-        bottom:-40px;
+        bottom:-45px;
     }
 
     .navigation .main-nav > li.has-sub:hover a:after {
-        bottom:-54px;
+        bottom:-59px;
         height:15px;
         background-color:#ffcc00;
+        z-index:99991;
     }
 
     .navigation .main-nav > li.active > a:after {
@@ -511,7 +546,7 @@
         display:block;
         width:100%;
         margin: 0 -24.5px;
-        bottom:-40px;
+        bottom:-45px;
         z-index:9;
         -webkit-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
@@ -520,7 +555,8 @@
 
     .navigation .main-nav li a {
         font-family: 'Gotham-Ultra', sans-serif;
-        font-size:25px;
+        /*font-size:25px;*/
+        font-size:18px;
         color:inherit;
         text-transform: uppercase;
         text-align:left;
@@ -707,7 +743,7 @@
     }
     .auction-timer-wrapper p {
         font-family: 'Squares', sans-serif;
-        color:#ffcc00;
+        color:#ffcc00 !important;
         font-size:16px;
     }
 
@@ -720,7 +756,7 @@
     .auction-timer-wrapper .timer .timer-col.separator p {
         position:relative;
         width:11px;
-        font-size:44px;
+        font-size:44px !important;
     } 
 
     .auction-timer-wrapper .timer .timer-col.separator p:after, .auction-timer-wrapper .timer .timer-col.separator p:before  {
@@ -750,19 +786,30 @@
     .auction-timer-wrapper .timer p {
         margin:0;
         padding:0;
-        line-height:1;
+        line-height:1 !important;
         text-align: left;
     }
 
     .auction-timer-wrapper .timer .dt-num {
         font-size:65px;
-        color:#fff;
+        color:#fff !important;
+        width:100px;
+        text-align: center;
+    }
+    .auction-timer-wrapper .timer .timer-col.sec .dt-num {
+        width:30px;
+        text-align: center;
+
     }
 
 
     .auction-timer-wrapper .timer .dt-lbl {
         font-size:10px;
+        width:100px;
+        text-align: left;
+        margin-left:4px;
     }
+
 
 
 
@@ -773,7 +820,7 @@
         font-size:16px;
         padding:3.5px 9.5px;
         display:inline-block;
-        background-color:rgba(255,102,0, 0.3);
+        background-color:rgba(255,102,0, 0.1);
         bottom:-17px;
     }
 
@@ -783,7 +830,7 @@
         position:absolute;
         height:1px;
         width:100%;
-        background-color:rgba(255,204,0,0.3);
+        background-color:rgba(255,204,0,0.1);
         left:0;
         right:0;
     }
@@ -885,6 +932,10 @@
         position:relative;
     }
 
+    .vehicle-type-wrapper {
+        margin-top:20px;
+    }
+
     .more-intel {
         background: url('../img/grundge_black.jpg') repeat center top;
         width:100%;
@@ -972,6 +1023,7 @@
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         width:100%;
+        margin-bottom:2px;
     }
 
     .footer #postcode {
@@ -992,6 +1044,7 @@
         background-color:#000;
         padding:10px 0;
         width:250px;
+        margin-bottom:2px;
     }
 
     .footer .copyright {
@@ -1112,28 +1165,42 @@
         position:relative;
     }
 
+
+    .vehicle-type .vehicle-item a {
+        text-decoration: none;
+        color:#fff;
+        display:block;
+        cursor:pointer;
+    }
+
+    .vehicle-type .vehicle-item a:hover {
+        color:#fff;
+        text-decoration: none;
+    }
+
     .vehicle-type .vehicle-item p {
         position:absolute;
         top:10px;
         left:11px;
         color:#fff;
         font-family: 'Gotham-Bold', sans-serif;
-        font-size:12px;
+        font-size:16px;
         text-transform: uppercase;
 
     }
 
     .vehicle-type .vehicle-item:hover img {
-          filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+        filter: initial;
         -webkit-filter: grayscale(0%);
     }
 
     .vehicle-type .vehicle-item img {
         width:100%;
-         filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
         filter: gray; /* IE6-9 */
-        -webkit-filter: grayscale(100%);       
+        -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */    
         -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
         -o-transition: all 1s ease;
         transition: all 1s ease;
 
@@ -1151,6 +1218,9 @@
 
     .vehicle-type .counter-cont.active {
         top:-45px;
+    }
+    .device .vehicle-type .counter-cont {
+        top:-45px !important;
     }
 
     .vehicle-type .counter-cont .auction-timer-wrapper {
@@ -1192,12 +1262,57 @@
 
     .more-intel .tile-item p {
         font-family: 'Gotham-Bold', sans-serif;
-        font-size:12px;
+        font-size:16px;
         color:#fff;
         text-transform: uppercase;
         margin-top:30px;
     }
 
+    .more-intel .tile-item-img {
+        position:relative;
+    }
+
+
+    .tile-img-hover {
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        -webkit-transform:rotate(180deg);
+        -moz-transform:rotate(180deg);
+        transform:rotate(180deg);
+        z-index:9;
+    }
+
+    .tile-img-hover .tile-hover {
+        position:relative;
+        height:0%;
+        bottom:0;
+        width:100%;
+        overflow:hidden;
+        opacity: 1;
+        /*
+        -webkit-transition: height 0.3s cubic-bezier(1, 0, 0, 1), opacity 0.3s ease-in-out;
+        -moz-transition: height 0.3s cubic-bezier(1, 0, 0, 1), opacity 0.3s ease-in-out;
+        transition: height 0.3s cubic-bezier(1, 0, 0, 1), opacity 0.3s ease-in-out;*/
+        -webkit-transition: height 0.7s cubic-bezier(1, 0, 0, 1);
+        -moz-transition: height 0.7s cubic-bezier(1, 0, 0, 1);
+        transition: height 0.7s cubic-bezier(1, 0, 0, 1);
+    }
+
+    .tile-item-img:hover .tile-img-hover .tile-hover {
+       height: 100%;
+       opacity: 1;
+    /*
+        -webkit-transition: height 0.7s cubic-bezier(1, 0, 0, 1), opacity 0.3s ease-in-out !important;
+        -moz-transition: height 0.7s cubic-bezier(1, 0, 0, 1), opacity 0.3s ease-in-out !important;
+        transition: height 0.7s cubic-bezier(1, 0, 0, 1), opacity 0.3s ease-in-out !important;
+   
+        -webkit-transition: height 0.7s cubic-bezier(1, 0, 0, 1) !important;
+        -moz-transition: height 0.7s cubic-bezier(1, 0, 0, 1)!important;
+        transition: height 0.7s cubic-bezier(1, 0, 0, 1)!important;*/
+    }
 
 
     .btn {
@@ -1233,10 +1348,6 @@
 
     #vehicle .hero-overlay h1 {
         color:#000;    
-        text-shadow: rgba(255, 255, 255, 0.0980392) -1px -1px 1px, rgba(0, 0, 0, 0.498039) 1px 1px 1px;
-        background: url(../img/text-mask.jpg) repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent
     }
 
 
@@ -1288,6 +1399,7 @@
 
     #vehicle .section-parallax {
         min-height:500px;
+        height:500px;
         position:relative;
        
     }
@@ -1295,6 +1407,7 @@
     .overview-container {
         background:url('../img/grundge_black.jpg') repeat center top;
         padding:50px 0;
+        overflow:hidden;
     }
 
     .adventure-container {
@@ -1332,6 +1445,22 @@
         background-color:#333333;
     }
 
+    .video-play {
+        position: absolute;
+        height: 45%;
+        display: block;
+        width: 25%;
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+    }
+
+    .videos-container  h1 {
+        margin:0 0 40px;
+    }
     .overview-container .container {
         display:block !important;
 
@@ -1514,7 +1643,7 @@
     }
 
     .model-container .model-item.available .m-img {
-        filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+        filter: initial;
         -webkit-filter: grayscale(0%);
     }
 
@@ -1560,6 +1689,7 @@
     .model-item .model-desc .download {
         color:#ffcc00;
         display:block;
+        font-size:16px;
     }
 
     .model-item .model-desc .btn {
@@ -1693,6 +1823,7 @@
 
     .video-item .video {
         margin-top:25px;
+        position:relative;
     }
     .wrapper-2 .logo, .wrapper-2 .hamburger {
         display:none;
@@ -1793,9 +1924,9 @@
 
     .vehicle-row-item .content {
         width: 100%;
-        height: 100%;
-        display:table;
-        overflow: auto;
+        height: 25%;
+        display:block;
+        overflow: hidden;
         margin: auto;
         position: absolute;
         top: 20px; 
@@ -1808,12 +1939,22 @@
     .vehicle-row-item h3 {
         text-transform: uppercase;
         font-size:25px;
-        color:#fff;
         margin:0;
     }
 
     .vehicle-row-item a {
         display:block;
+        cursor:pointer;
+        color:#fff;
+        text-decoration: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3 ease-in-out;
+    }
+
+    .vehicle-row-item a:hover, .vehicle-row-item a:hover p {
+        color:#ffcc00 !important;
+        text-decoration: none;
     }
     .vehicle-row-item a img { 
         width:100%;
@@ -1827,7 +1968,9 @@
         font-family: 'Gotham-Bold', sans-serif;
         text-transform: uppercase;
         font-size:12px !important;
-        color:#fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3 ease-in-out;
     }
 
     .vehicle-row-item .modal img {
@@ -1870,7 +2013,6 @@
         font-weight:normal;
         color:#fff;
     }
-
     .contact .m-reach-us {
         display:none;
     }
@@ -2065,6 +2207,11 @@
     #showroom .showrooms-details {
         padding-left:0;
     }
+    #showroom .showrooms-details p {
+        font-size:18px;
+        line-height:27px;
+        font-weight:normal;
+    }
 
     .email-txt {
         text-decoration: underline;
@@ -2133,9 +2280,6 @@
         top: -140px;
     }
 
-    .auction-showroom .timeTo figure.sec, .vehicle-type .timeTo figure.sec {
-        display:none;
-    }
 
     .auction-showroom .counter-cont {
         float: right;
@@ -2219,36 +2363,36 @@
 
 
 
-    .mobile .hero-overlay, .mobile .hero-image {
+    .device .hero-overlay, .device .hero-image {
         background-attachment: initial;
     }
 
-    .mobile .hero-image .container {
+    .device .hero-image .container {
         position:absolute !important;
         top:auto;
     }
 
-    .mobile .section-parallax {
+    .device .section-parallax {
         background-attachment: initial !important;
     }
 
 
-    .mobile .auction-timer {
+    .device .auction-timer {
         position:absolute;
         bottom:0;
     }
 
-    .mobile .hero-overlay {
+    .device .hero-overlay {
         position:absolute !important;
         top:auto;
     }
 
-    .mobile .hero-image .auction-timer, .mobile .counter-cont {
+    .device .hero-image .auction-timer, .device .counter-cont {
         display:none;
     }
 
 
-    .mobile .hero-overlay2 {
+    .device .hero-overlay2 {
         display:none;
     }
 
@@ -2267,6 +2411,8 @@
 
 
 
+
+
     @media (max-width: 1250px) {
       
         .navigation .sub-logo {
@@ -2276,8 +2422,15 @@
     }
 
     @media (max-width: 1200px) {
+  
+        .vehicle-type .desc, .auction-showroom .desc {
+            padding:100px 10px 25px !important;
+        }
         .wrapper-2.intel-close .header  { 
             position:absolute;
+        }
+        .vehicle-overview .timer-wrapper {
+            height:250px;
         }
         .intel-close .navigation-active .navigation {
             top:0;
@@ -2527,7 +2680,7 @@
         }
         #contact-us .contact, #showroom .showrooms {
             margin-top:-100px;
-            padding:200px 0 90px;
+            padding:200px 0 45px;
         }
 
         #contact-us.intel-active .contact, #showroom.intel-active .showrooms, #auction.intel-active .auction-showroom {
@@ -2569,8 +2722,9 @@
             -moz-transform: scale(1);
             transform: scale(1);
         }
-        #auction .auction-showroom .desc, #vehicle-overview .vehicle-type .desc {
+        #vehicle-overview .vehicle-type .desc {
             max-width:100%;
+            padding:0 20px;
         }
 
 
@@ -2600,6 +2754,29 @@
         }
     }   
 
+    @media (max-width: 1024px) {
+
+        .overview-container ul li:nth-child(3) {
+            display:none;
+        }
+        .wrap-navigation {
+            display:none;
+        }
+        .timer-wrapper {
+            display:block;
+            background:000;
+        }
+        .timer-wrapper .auction-timer {
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            transform: scale(1);
+            top:30px;
+        }
+        .about {
+            margin-top:40px !important;
+        }
+
+    }
 
 
     @media (max-width: 992px) {
@@ -2611,8 +2788,40 @@
 
     }
 
-    @media (max-width: 991px) {
-
+    @media (max-width: 991px) { 
+        .showroom-location {
+            padding:0;  
+        }
+        #showroom .showrooms-details {
+            margin-bottom:20px;
+        }
+        .wrapper-2 .wrap p {
+            font-size: 20px;    
+        } 
+        .wrapper-2 .wrap p br {
+            display:none;
+        }
+        .contact .contact-form {
+                border-right: 0;
+                    padding-right: 0;
+        }
+        .contact button {
+            width:100%;
+        }
+        .contact .showroom-details {
+            display:none;
+        }
+        .contact .showroom {
+                margin-top: 20px;
+            padding-left:0;
+                text-align: center;
+        }
+        .contact .social-links li {
+            float:none;
+        }
+        .video-desc {
+            height: auto !important;
+        }
         .overview-container .metal-container {
             top:30px;
             margin: 0 auto;
@@ -2675,7 +2884,7 @@
 
     }
 
-    @media (max-width: 1200px) and (min-width: 768px ) {
+    @media (max-width: 1200px) and (min-width: 992px ) {
           .notice-soon {
             width:90%;
             height:auto;
@@ -2703,11 +2912,82 @@
     }
 
     @media (max-width: 768px) {
+        .vehicle-type .desc, .auction-showroom .desc {
+            padding:0 !important;
+        }
+        .vehicle-row-item a img {
+            width:auto;
+        }
+        .vehicle-row-item {
+            min-height:240px;
+        }
+        .auction-timer {
+            background: url('../img/auction-bg2.png') no-repeat center center;
+        }
+        .contact .showroom {
+            padding:0;
+        }
+
+        .flare img {
+            width:100px;
+        }
+
+        .flare-left {  
+            -webkit-transform: rotate(-90deg) translateX(-112px) rotate(-90deg) !important; 
+            -moz-transform: rotate(-90deg) translateX(-112px) rotate(-90deg) !important; 
+            transform: rotate(-90deg) translateX(-112px) rotate(-90deg) !important; 
+        }
+
+        .flare-right {  
+           -webkit-transform: rotate(-90deg) translateX(-112px) rotate(-90deg) !important;
+           -moz-transform: rotate(-90deg) translateX(-112px) rotate(-90deg) !important;
+           transform: rotate(-90deg) translateX(-112px) rotate(-90deg) !important;
+        }
+
+        .tile-item-img:hover .flare-left {  
+            -webkit-transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important; 
+            -moz-transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important; 
+            transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important; 
+        }
+
+        .tile-item-img:hover .flare-right { 
+            -webkit-transform: rotate(-270deg) translateX(-112px) rotate(-90deg) !important; 
+            -moz-transform: rotate(-270deg) translateX(-112px) rotate(-90deg) !important; 
+            transform: rotate(-270deg) translateX(-112px) rotate(-90deg) !important;             
+        }
+
+        /*
+        .flare-left {
+            -webkit-transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important;
+            -moz-transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important;
+            transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important;
+        }
+
+        .flare-right {
+            -webkit-transform: rotate(-88deg) translateX(-112px) rotate(90deg) !important;
+            -moz-transform: rotate(-88deg) translateX(-112px) rotate(90deg) !important;
+            transform: rotate(-88deg) translateX(-112px) rotate(90deg) !important;
+        }
+
+        .tile-item-img:hover .flare-left { 
+            -webkit-transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important;   
+            -moz-transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important;   
+            transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important;          
+        }
+
+
+        .tile-item-img:hover .flare-right { 
+            -webkit-transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important;  
+            -moz-transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important; 
+            transform: rotate(90deg) translateX(-112px) rotate(-90deg) !important;      
+        }*/
 
         .logo {
             top:-85px !important;
             width:200px !important;
             left:-10px;
+            height:250px;
+            overflow:hidden;
         }
         .hamburger, .hamburger.active {
             right:30px;
@@ -2740,6 +3020,10 @@
         .get-intel .signup {
             width:auto;
             padding:8px 19px;
+            margin:0;
+        }
+        .btn-close {
+            top:30px;
         }
 
         .footer-block:first-child {
@@ -2783,6 +3067,7 @@
             width:100%;
             margin-top:-1px;
         }
+
 
         .btn {
             width:100%;
@@ -2841,6 +3126,7 @@
 
         #vehicle .section-parallax {
             min-height:440px;
+            height:440px;
         } 
 
         .contact .contact-form {
@@ -2949,8 +3235,14 @@
         .upcoming-auctions {
             padding:0 0 25px;
         }
-        .auction-showroom, #vehicle-overview .vehicle-type {
-            padding:200px 0 45px;
+        .auction-showroom, #vehicle-overview .vehicle-type, #contact-us .contact, #showroom .showrooms {
+            padding:140px 0 45px;
+        }
+        #auction .auction-showroom  {
+            padding:140px 20px 45px !important;
+        }
+        #vehicle-overview .vehicle-type .desc {
+            padding:0 20px !important;
         }
         .auction-showroom p {
             line-height: 1.5 !important;
@@ -2959,7 +3251,7 @@
             margin:0 -20px;
         }
         #showroom .showrooms, #auction .auction-showroom {
-            padding:160px 10px 45px;
+            padding:140px 10px 45px;
         }
         .vehicle-type .vehicle-item p {
             font-size:24px;
@@ -2985,27 +3277,33 @@
         }
         #overview {
             margin-top:0 !important;
-        }
-        .timer-wrapper .auction-timer {
-            top:30px;
+            min-height:auto !important;
+            height:auto !important;
         }
         .overview-container {
             padding:30px 0 60px;
-        }
-        .wrapper-2 .wrap p {
-            font-size:20px;
         }
         .mobile .timer-wrapper {
             background:none;
             background-color:#000;
         }
-        .auction-timer-wrapper .timer .timer-col.sec .dt-num {
-            display:none;
+        .metal-container ul li { 
+
+            font-weight:700;
+        }
+        .subscribe-btn div {
+            padding:10px 0;
+        }
+        .model-item .model-desc {
+            padding:20px 35px;
         }
     }
 
 
     @media (max-width: 640px) {
+        .navigation, .intel-active .navigation {
+            top: -180% !important;
+        }
 
         .overview-container ul {
             margin:30px 0 0 !important;
@@ -3039,23 +3337,21 @@
 
     @media (max-width: 600px) {
         .get-intel h1 {
-            font-size: 20px;
-        }
-        .get-intel p {
-            font-size: 7px;
+            font-size: 25px;
         }
 
         .get-intel .signup {
             font-size:15px;  
             padding:6px 19px;
+            margin:2px 0 0;
         }
 
         .get-intel {
-            height:50px;
+            height:75px;
         }
 
         .btn-close {
-            top:10px;
+            top:18px;
         }
 
         .btn-close span {
@@ -3063,12 +3359,30 @@
         }
 
         .get-intel {
-            top:-60px;
+            top:-75px;
         }
 
-        #vehicle-overview .vehicle-type, #auction .auction-showroom {
-            margin-top: 10px;
+        .hero-image, #vehicle-overview .vehicle-type, #auction .auction-showroom, #contact-us .contact, #showroom .showrooms {
+            margin-top: -75px;
         }
+
+        /*
+        #contact-us .contact, #showroom .showrooms {
+            margin-top:-75px;
+        }
+
+        .hero-image {
+            margin-top:-75px;
+        }
+
+        .intel-active .header.navigation-active, .intel-active .header.scrolling {
+            top:75px;
+        }
+
+        .wrapper-2.intel-active .header,  .wrapper-2.intel-active.header-animate .header {
+            top:75px !important;
+        }
+        */
 
         .mobile-logo {
             left:10px;
@@ -3078,27 +3392,15 @@
         }
 
         .main-header {
-            top:-60px;
-        }
-        .hero-image {
-            margin-top:-60px;
+            top:-75px;
         }
 
-        .intel-active .navigation-active .navigation {
-            top:60px !important;
+        .wrapper-2.intel-active .header,  .wrapper-2.intel-active.header-animate .header, .intel-active .navigation-active .navigation, .intel-active .header.navigation-active, .intel-active .header.scrolling {
+            top:75px !important;
         }
 
         .intel-hide .navigation-active .navigation {
             top:0 !important;
-        }
-        .intel-active .header.navigation-active, .intel-active .header.scrolling {
-            top:60px;
-        }
-        .wrapper-2.intel-active .header,  .wrapper-2.intel-active.header-animate .header {
-            top:60px !important;
-        }
-        #contact-us .contact, #showroom .showrooms {
-            margin-top:-61px;
         }
 
     }
@@ -3123,9 +3425,18 @@
             -moz-transform:scale(0.7) !important;
             transform:scale(0.7) !important;
         }
+        .border {
+            width:47%;
+        }
     }
 
     @media (max-width: 480px) {
+        .get-intel h1 {
+            font-size: 20px;
+        }
+        .border {
+            width:46%;
+        }
         h1 {
             font-size:25px;
         }
@@ -3220,21 +3531,36 @@
             font-size:25px;
             text-align:center;
         } 
-
-
+        .auction-timer-wrapper p {
+            font-family: 'Squares', sans-serif;
+            color: #ffcc00 !important;
+            font-size: 16px !important;
+        }
+        .auction-timer-wrapper .timer .dt-num {
+            font-size:65px !important;
+        }
+        .auction-timer-wrapper .timer .timer-col.sec .dt-num {
+            width: 30px;
+            text-align: center;
+            font-size: 24px !important;
+            margin: -10px 0 0px !important;
+            display: block;
+        }
     }
 
     @media (max-width: 440px) {
-
+ /*
         .get-intel h1 {
             font-size:16px;
         }
+
+
         .get-intel p {
             font-size: 5px;
         }
         .get-intel .signup {
             padding: 3px 19px;
-            margin: 10px 0 0;
+            margin: 6px 0 0;
         }
         .btn-close {
             right: 10px;
@@ -3247,14 +3573,20 @@
             font-size:10px;
             padding:7px 19px;
         }
+
+
+     
         .get-intel {
             top:-53px;
         }
         .get-intel .content {
             padding: 13px 0 0;
         }
+        #vehicle-overview .vehicle-type, #auction .auction-showroom {
+            margin-top:-54px;
+        }
         #contact-us.intel-active .contact, #showroom.intel-active .showrooms, #vehicle-overview.intel-active .vehicle-type {
-            margin-top:69px;
+            margin-top:0;
         }
         .intel-active .navigation-active .navigation,.intel-active .scrolling .navigation {
             top:53px;
@@ -3282,14 +3614,24 @@
 
         .wrapper-2.intel-active .header,  .wrapper-2.intel-active.header-animate .header {
             top:53px !important;
-        }
+        }*/
     }
 
     @media (max-width: 420px) {
         
        
         #contact-us .contact,  #showroom .showrooms {
-            margin-top:16px;
+            margin-top:-53px;
+        }
+
+        .get-intel h1 {
+            font-size: 18px;
+        }
+        .get-intel .signup {
+            font-size:12px;
+        }
+        .btn-close span {
+            width: 25px;
         }
         
     }
@@ -3302,7 +3644,15 @@
     }
 
     @media (max-width: 380px) {
-
+        .get-intel .container {
+            padding: 0 12% 0 10px;
+        }
+        .btn-close {
+            right: 5px;
+        }
+        .get-intel h1 {
+            font-size: 16px;
+        }
         .timer-wrapper .auction-timer {
             -webkit-transform: scale(0.6);
             -moz-transform: scale(0.6);
@@ -3314,6 +3664,7 @@
             -moz-transform: scale(0.6);
             transform: scale(0.6);
             left:-30px;
+            top:20%;
         }
 
         .overview-container .metal-container {
@@ -3366,6 +3717,9 @@
 
 
     @media (max-width: 320px) {
+        .wrapper-2 .timer-wrapper .auction-timer {
+            top:0;
+        }
         .get-intel h1 {
             font-size: 15px;
         }
@@ -3402,7 +3756,7 @@
             left:-40px;
         }
         .timer-wrapper .auction-timer {
-            left: -88px;
+            left: -75px;
             top: -23px;
             -webkit-transform: scale(0.6);
             -moz-transform: scale(0.6);
@@ -3435,6 +3789,10 @@
         .mobile .intel-active .hero-overlay {
             display:none;
         }
+        .mobile #vehicle .hero-overlay {
+            display:block !important;
+        }
+
         .more-intel .container, .vehicle-type .container, .auction-showroom .container {
             width: 100%;
             padding:0 10px;
@@ -3544,4 +3902,97 @@
     .about {
         margin-top: 600px;
     }
+
+/*
+
+.flare {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    opacity:1;
+    z-index:99;
+    vertical-align: middle;
+}
+*/
+
+.flare {
+    width: 100%;
+    height: 25%;
+    margin: auto;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    overflow:auto;
+    z-index:99;
+    visibility:hidden;
+    -webkit-transition: all 0.7s cubic-bezier(1, 0, 0, 1);
+    -o-transition: all 0.7s cubic-bezier(1, 0, 0, 1);
+    transition: all 0.7s cubic-bezier(1, 0, 0, 1);
+}
+.done-hover .flare {
+    visibility: hidden !important;
+    -webkit-transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+    -o-transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+    transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.flare img { 
+    width:120px !important;
+}
+
+.flare-left {  
+    -webkit-transform: rotate(-90deg) translateX(-47%) rotate(-90deg); 
+    -moz-transform: rotate(-90deg) translateX(-47%) rotate(-90deg); 
+    transform: rotate(-90deg) translateX(-47%) rotate(-90deg); 
+}
+
+.flare-right {  
+   -webkit-transform: rotate(-90deg) translateX(-47%) rotate(-90deg);
+   -moz-transform: rotate(-90deg) translateX(-47%) rotate(-90deg);
+   transform: rotate(-90deg) translateX(-47%) rotate(-90deg);
+}
+
+
+.tile-item-img:hover .flare-left {  
+    /*-webkit-animation: myOrbitLeft 0.8s cubic-bezier(1, 0, 0, 1) 1; 
+    -moz-animation: myOrbitLeft 0.8s cubic-bezier(1, 0, 0, 1) 1; 
+    -o-animation: myOrbitLeft 0.8s cubic-bezier(1, 0, 0, 1) 1; 
+    animation: myOrbitLeft 0.8s cubic-bezier(1, 0, 0, 1) 1;*/
+
+
+    -webkit-transform: rotate(90deg) translateX(-47%) rotate(-90deg); 
+    -moz-transform: rotate(90deg) translateX(-47%) rotate(-90deg); 
+    transform: rotate(90deg) translateX(-47%) rotate(-90deg); 
+
+    visibility:visible;    
+}
+
+
+.tile-item-img:hover .flare-right { 
+    /*-webkit-animation: myOrbitRight 0.8s cubic-bezier(1, 0, 0, 1) 1; 
+    -moz-animation: myOrbitRight 0.8s cubic-bezier(1, 0, 0, 1) 1; 
+    -o-animation: myOrbitRight 0.8s cubic-bezier(1, 0, 0, 1) 1; 
+    animation: myOrbitRight 0.8s cubic-bezier(1, 0, 0, 1) 1;*/
+
+
+
+    -webkit-transform: rotate(-270deg) translateX(-47%) rotate(-90deg); 
+    -moz-transform: rotate(-270deg) translateX(-47%) rotate(-90deg); 
+    transform: rotate(-270deg) translateX(-47%) rotate(-90deg); 
+    
+    
+    visibility:visible;
+                                
+}
+
+
 
