@@ -991,6 +991,11 @@
         vertical-align: top;
     }
 
+    .footer-block p a {
+        color:#fff;
+        text-decoration: none;
+    }
+
     .footer .footer-block ul {
         list-style-type: none;
         margin:0;
