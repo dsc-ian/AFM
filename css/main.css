@@ -169,7 +169,49 @@
         -o-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;*/
     }
+    .mobile-logo {
+        visibility: hidden;
+        width: 50px;
+        margin: 3px 20px;
 
+        position:absolute;
+        top:-60px;
+        webkit-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .mobile-logo img {
+        width:100%;
+    }
+
+
+    .header-active {
+        top:0;
+    }
+    .header-active .hamburger {
+        top:20px;
+    }
+
+    .header-active .hamburger span {
+        background-color:#fff;
+    }
+    .main-header-hide {
+        top:-60px;
+    }
+    .header-active.main-header, .intel-hide .header-active.main-header {
+        position: fixed !important;
+        width: 100%;
+        background-color: #ffcc00;
+        height: 60px;
+    }
+    .header-active .mobile-logo  {
+        visibility: visible;
+        top:0;
+    }
+    .header-active .logo {
+        display:none !important;
+    }
     .intel-close .header {
         top:0;
         -webkit-transition: all 0.5s ease-in-out;
@@ -215,32 +257,7 @@
     }
 
 
-    .mobile-logo {
-        display:none !important;
-        width: 50px;
-        margin: 3px 20px
-    }
-
-    .mobile-logo img {
-        width:100%;
-    }
-
-    .header-active .hamburger span {
-        color:#fff;
-    }
-
-    .header-active.main-header {
-        position: fixed !important;
-        width: 100%;
-        background-color: #ffcc00;
-        height: 60px;
-    }
-    .header-active .mobile-logo  {
-        display:block;
-    }
-    .header-active .logo {
-        display:none;
-    }
+   
 
 
     .intel-hide .logo {
@@ -1987,6 +2004,39 @@
         margin-top: 131px;
     }
 
+    .support h1 {
+        position:relative;
+        overflow:hidden;
+    }
+
+    .support h1 .border {
+        height: 1px;
+        background-color: #444444;
+        position:absolute;
+        width: 76%;
+        left: 270px;
+        display: block;
+        top: 30px;
+    }
+
+    .support .support-item {
+        padding:20px 0;
+        margin:60px 0;
+        border:1px solid #444444;
+    }
+
+    .support .btn {
+        margin:0;
+        white-space: normal;
+        width:100%;
+        padding:19px 20px;
+        font-size:16px;
+    }
+
+    hr {
+        border-top: 1px solid #444444;
+    }
+
     #contact-us .contact {
         position: relative;
         margin-top: 31px;
@@ -2422,7 +2472,7 @@
     }
 
     @media (max-width: 1200px) {
-  
+   
         .vehicle-type .desc, .auction-showroom .desc {
             padding:100px 10px 25px !important;
         }
@@ -2559,6 +2609,11 @@
         }
         .intel-active .navigation-active .navigation {
             top:100px !important;
+            overflow-y:scroll;
+            padding-bottom:50px;
+        }
+        .intel-hide .navigation-active .navigation {
+            top:0 !important;
         }
         .main-header-active .hamburger, .scrolling .hamburger {
             top:50px !important;
@@ -2789,6 +2844,10 @@
     }
 
     @media (max-width: 991px) { 
+        .support h1 .border {
+                top: 25px;
+                    left: 210px;
+        }
         .showroom-location {
             padding:0;  
         }
@@ -3014,7 +3073,6 @@
 
         .about {
             padding: 50px 0;
-            margin-top:0 !important;
         }
 
         .get-intel .signup {
