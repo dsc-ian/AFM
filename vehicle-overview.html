@@ -16,7 +16,6 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/timeTo.css">
         <link rel="stylesheet" href="css/custom-animation.css">
         <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="css/main.css">
@@ -48,7 +47,18 @@
             <div class="header clearfix">
 
                 <div class="main-header">
-                    <a href="index.html" class="logo"><img src="img/logo.png"></a>
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" class="desktop-logo">
+                        <img src="img/mobile-logo.png" class="mobile-main-logo">
+                    </a>
+                    <a href="#" class="hamburger">
+                        <span class="bar-1 patty-1"></span>
+                        <span class="bar-2 patty-2"></span>
+                        <span class="bar-3 patty-3"></span>
+                    </a>
+                </div>              
+
+                <div class="fixed-header">
                     <a href="index.html" class="mobile-logo"><img src="img/logo-nav.jpg"></a>
                     <a href="#" class="hamburger">
                         <span class="bar-1 patty-1"></span>
@@ -80,7 +90,7 @@
                             </ul>
                         </li>
                         <li><a href="#">Field Report<span>Get The Last Intel</span></a></li>
-                        <li><a href="contact.html">Reinforcement<span>Get Support</span></a></li>
+                        <li><a href="support.html">Reinforcement<span>Get Support</span></a></li>
                     </ul>
                      <a href="#" class="hamburger active">
                         <span class="bar-1 patty-1"></span>
@@ -169,7 +179,7 @@
                        
                             <div class="vehicle-row-item col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="100">
                                 <a href="vehicle.html" class=""> 
-                                    <img src="img/v-img1.jpg">
+                                    <img src="img/v-img1.jpg" data-desktop-image="v-img1.jpg" data-mobile-image="mobile-v-img1.jpg">
                                     <div class="content">
                                         <h3>Trucks</h3>
                                         <p>Click to view range</p>
@@ -180,7 +190,7 @@
 
                             <div class="vehicle-row-item  col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="200">
                                 <a href="vehicle.html" class=""> 
-                                    <img src="img/v-img2.jpg">
+                                    <img src="img/v-img2.jpg" data-desktop-image="v-img2.jpg" data-mobile-image="mobile-v-img2.jpg">
                                     <div class="content">
                                         <h3>Land Rovers</h3>
                                         <p>Click to view range</p>
@@ -191,7 +201,7 @@
                       
                             <div class="vehicle-row-item col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="300">
                                 <a href="vehicle.html" class=""> 
-                                    <img src="img/v-img3.jpg">
+                                    <img src="img/v-img3.jpg" data-desktop-image="v-img3.jpg" data-mobile-image="mobile-v-img3.jpg">
                                     <div class="content">
                                         <h3>Motorcycles</h3>
                                         <p>Click to view range</p>
@@ -199,8 +209,8 @@
                                 </a>
                             </div>
                             <div class="vehicle-row-item  col-lg-6 col-md-6 col-sm-6 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="400">
-                                <a href="img/v-img4.jpg" class="modal-btn">
-                                    <img src="img/v-img4.jpg">
+                                <a href="vehicle.html" class="modal-btn">
+                                    <img src="img/v-img4.jpg" data-desktop-image="v-img4.jpg" data-mobile-image="mobile-v-img4.jpg">
                                     <div class="content">
                                         <h3>Unimogs</h3>
                                         <p>Click to view range</p>
@@ -211,7 +221,7 @@
                       
                             <div class="vehicle-row-item col-lg-12 col-md-12 col-sm-12 col-xs-12 animated hiding" data-animation="fadeIn" data-delay="500">
                                 <a href="vehicle.html" class=""> 
-                                    <img src="img/v-img5.jpg">
+                                    <img src="img/v-img5.jpg" data-desktop-image="v-img5.jpg" data-mobile-image="mobile-v-img5.jpg">
                                     <div class="content">
                                         <h3>Trailers</h3>
                                         <p>Click to view range</p>
@@ -300,8 +310,8 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/jquery.stellar.js"></script>
         <script src="js/vendor/jquery.fancybox.js"></script>
-        <script src="js/vendor/jquery.timeTo.js"></script>
         <script src="js/vendor/jquery.appear.js"></script>
+        <script src="js/vendor/jquery.blImageCenter.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
