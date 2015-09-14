@@ -196,9 +196,6 @@
     .header-active .hamburger span {
         background-color:#fff;
     }
-    .main-header-hide {
-        top:-60px;
-    }
     .header-active.main-header, .intel-hide .header-active.main-header {
         position: fixed !important;
         width: 100%;
@@ -708,6 +705,16 @@
     .intel-hide .main-header {
         position:fixed !important;
         z-index:999;
+    }
+    
+    .main-header-hide {
+        top:-60px;
+        position:fixed !important;
+        -webkit-transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+        -moz-transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+        -o-transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+        -ms-transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+        transition: all 0.7s cubic-bezier(0.95, 0.05, 0.795, 0.035);
     }
     /*
 

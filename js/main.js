@@ -283,6 +283,9 @@ $(window).resize(function(){
 
 
 
+			var _top = $(window).scrollTop();
+			var _direction;
+
 $(window).scroll(function(e) {
 	var _viewport = {
 		width : $(window).width(),
@@ -337,8 +340,10 @@ $(window).scroll(function(e) {
 			} else {
 				targetHeight = 990;
 			}
+			
 
-			if(height >= targetHeight) {
+
+			if(height >= targetHeight) {	
 				addRemoveClasses('.wrap-navigation', 'sticky', true);
 			} else {
 				addRemoveClasses('.wrap-navigation', 'sticky', false);
@@ -346,6 +351,25 @@ $(window).scroll(function(e) {
 
 
 		} else { // screen smaller than 1200
+
+			    var _cur_top = $(window).scrollTop();
+
+			    if ( $(window).scrollTop()  >= 100) {
+			    	if(_top < _cur_top)
+				    {
+				        $('.main-header').removeClass('header-active');
+				        $('.main-header').addClass('main-header-hide');
+				    }
+				    else
+				    {
+				        $('.main-header').addClass('header-active');
+				        $('.main-header').removeClass('main-header-hide');
+				    }
+				    _top = _cur_top;
+				} else {
+					$('.main-header').removeClass('header-active');
+				}
+		
 
 
 			if($('.wrapper').hasClass('intel-active')) {
