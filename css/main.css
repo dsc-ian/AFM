@@ -706,7 +706,7 @@
         position:fixed !important;
         z-index:999;
     }
-    
+
     .main-header-hide {
         top:-60px;
         position:fixed !important;
@@ -2031,14 +2031,21 @@
         top: 30px;
     }
 
+    .support p {
+        margin:30px 0 40px;
+    }
+
     .support .support-item {
         padding:20px 0;
-        margin:60px 0;
+        margin:80px 0;
         border:1px solid #444444;
+    }
+    .support .support-item p {
+        margin:0 0 10px;
     }
 
     .support .btn {
-        margin:0;
+        margin:5px 0 0;
         white-space: normal;
         width:100%;
         padding:19px 20px;
@@ -2639,6 +2646,12 @@
         }
         .intel-hide .main-header {
             position:absolute !important;
+        }
+        .main-header-hide {
+            position:fixed !important;
+                -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
         }
         .navigation {
             position:fixed !important;
