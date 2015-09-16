@@ -1989,9 +1989,6 @@
         font-size:20px;
     }
 
-    .step:first-child {
-        margin:30px 0 60px;
-    }
 
     .step {
         margin:60px 0;
@@ -3031,6 +3028,10 @@
     }
 
     @media (max-width: 991px) { 
+        
+        .step:first-child {
+            margin:30px 0 60px;
+        }
         .step {
             text-align:center;
         }
