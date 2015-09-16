@@ -1975,7 +1975,62 @@
         background: url('../img/grundge_black.jpg') repeat;
     }
 
-  
+
+    .how-it-works {
+        padding:40px 0 60px;
+    }
+
+    .how-it-works h1 {
+        text-align: center;
+    }
+
+    .how-it-works h1 span {
+        display:block;
+        font-size:20px;
+    }
+
+    .step {
+        margin:60px 0;
+    }
+
+    .step div {
+        padding:0;
+    }
+
+    .step h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight:100 !important;
+        font-size:60px !important;
+        color:#fff !important;
+        text-transform: capitalize !important;
+        margin-top:0;
+    }
+
+    .step h3 span {
+        border: 1px solid #fff;
+        border-radius: 47px;
+        width: 70px;
+        height: 70px;
+        font-size: 50px;
+        padding: 6px;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    .step h4 {
+        font-family: 'Gotham-Ultra', sans-serif;
+        font-size:20px;
+        text-transform: uppercase;
+        color:#ffcc00;
+        margin-top:5px;
+    }
+
+    .step .btn {
+        width:355px;
+        padding:20px 0;
+        margin:20px 0 000;
+    }
 
     #vehicle-overview .vehicle-type p {
         color:#fff;
@@ -2972,6 +3027,12 @@
     }
 
     @media (max-width: 991px) { 
+        .step {
+            text-align:center;
+        }
+        .step .btn {
+            width:100%;
+        }
         .support h1 .border {
                 top: 25px;
                     left: 210px;
@@ -3618,6 +3679,15 @@
     }
 
     @media (max-width: 480px) {
+        .step h3 {
+            font-size:30px !important;
+        }
+        .step h3 span {
+            font-size:25px;
+            border-radius: 40px;
+            width: 40px;
+            height: 40px;
+        }
         .get-intel h1 {
             font-size: 20px;
         }
